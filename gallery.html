@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Gallery | Triumph Farms & Consultation - Ghana</title>
+  <meta name="description" content="See our modern catfish farm, healthy fingerlings, training sessions, pond constructions, and happy farmers across Ghana."/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0F4C3A',
+            accent: '#10B981',
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Simple Lightbox CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"/>
+  <link rel="shortcut icon" href="assets//logo.png" type="image/x-icon">
+
+  
+  <style>
+     body{
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .nav-link { position:relative; transition:color .3s; }
+    .nav-link::after { content:''; position:absolute; width:0; height:3px; bottom:-8px; left:0; background:#10B981; transition:width .4s ease; }
+    .nav-link:hover::after, .nav-link.active::after { width:100%; }
+    .nav-link.active { color:#10B981; font-weight:700; }
+
+    .gallery-grid {
+      column-count: 2;
+      column-gap: 1.5rem;
+    }
+    @media (min-width: 640px) { .gallery-grid { column-count: 3; } }
+    @media (min-width: 1024px) { .gallery-grid { column-count: 4; } }
+
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 1.5rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transition: all 0.4s ease;
+    }
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+
+  <!-- Mobile Menu & Header -->
+  <div id="menuOverlay" class="fixed inset-0 bg-black/70 z-40 hidden" onclick="closeMenu()"></div>
+  <aside id="mobileSidebar" class="fixed top-0 left-0 h-screen w-80 max-w-[90vw] bg-primary text-white transform -translate-x-full transition-transform duration-300 z-50">
+    <div class="flex items-center justify-between p-6 border-b border-emerald-800">
+      <img src="assets/logo.png" alt="Triumph Farms" class="h-12">
+      <button onclick="closeMenu()" class="text-3xl hover:text-accent"><i class="fas fa-times"></i></button>
+    </div>
+    <nav class="mt-6 text-lg font-medium">
+      <a href="index.html" class="block py-4 px-8 hover:bg-emerald-800">Home</a>
+      <a href="services.html" class="block py-4 px-8 hover:bg-emerald-800">Services</a>
+      <a href="pricing.html" class="block py-4 px-8 hover:bg-emerald-800">Pricing</a>
+      <a href="training.html" class="block py-4 px-8 hover:bg-emerald-800">Training</a>
+      <a href="gallery.html" class="block py-4 px-8 bg-emerald-800 font-bold">Gallery</a>
+      <a href="contact.html" class="block py-4 px-8 hover:bg-emerald-800">Contact</a>
+    </nav>
+  </aside>
+
+  <header class="sticky top-0 bg-white/95 backdrop-blur-sm shadow-lg z-30 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <button onclick="openMenu()" class="lg:hidden text-3xl text-primary"><i class="fas fa-bars"></i></button>
+      <a href="index.html"><img src="assets/logo.png" alt="Triumph Farms" class="h-12 sm:h-14"></a>
+      <nav class="hidden lg:flex items-center space-x-8 xl:space-x-10 text-lg font-semibold">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="training.html" class="nav-link">Training</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="contact.html" class="nav-link text-accent font-bold">Contact</a>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- GALLERY GRID -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold">Photo Gallery</h2>
+        <p class="mt-4 text-xl text-gray-600">Real photos from our farm in Greater Accra, Ghana</p>
+        <p class="mt-6 text-xl sm:text-2xl opacity-90">
+          Modern catfish farming • Healthy fingerlings • Happy farmers
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Replace these placeholder URLs with your real photos in assets/gallery/ -->
+        <a href="assets/extra1.jpg" data-lightbox="farm" data-title="Premium fingerlings ready for delivery" class="gallery-item">
+          <img src="assets/extra1.jpg" alt="Fingerlings" loading="lazy">
+        </a>
+        <a href="assets/extra2.jpg" data-lightbox="farm" data-title="Modern concrete ponds" class="gallery-item">
+          <img src="assets/extra2.jpg" alt="Concrete ponds" loading="lazy">
+        </a>
+        <a href="assets/extra3.jpg" data-lightbox="farm" data-title="Training session in progress" class="gallery-item">
+          <img src="assets/extra3.jpg" alt="Training" loading="lazy">
+        </a>
+        <a href="assets/extra4.jpg" data-lightbox="farm" data-title="Harvesting 2kg+ catfish" class="gallery-item">
+          <img src="assets/extra4.jpg" alt="Harvest" loading="lazy">
+        </a>
+        <a href="assets/extra5.jpg" data-lightbox="farm" data-title="Happy customer receiving fingerlings" class="gallery-item">
+          <img src="assets/extra5.jpg" alt="Delivery" loading="lazy">
+        </a>
+        <a href="assets/extra6.jpg" data-lightbox="farm" data-title="Aeration system installation" class="gallery-item">
+          <img src="assets/extra6.jpg" alt="Aeration" loading="lazy">
+        </a>
+        <a href="assets/extra7.jpg" data-lightbox="farm" data-title="Farmers learning sorting techniques" class="gallery-item">
+          <img src="assets/extra7.jpg" alt="Sorting training" loading="lazy">
+        </a>
+        <a href="assets/extra1.jpg" data-lightbox="farm" data-title="Our breeding facility" class="gallery-item">
+          <img src="assets/extra1.jpg" alt="Breeding" loading="lazy">
+        </a>
+        <a href="assets/extra6.jpg" data-lightbox="farm" data-title="Nationwide delivery in progress" class="gallery-item">
+          <img src="assets/extra6.jpg" alt="Delivery truck" loading="lazy read-only">
+        </a>
+        <!-- <a href="assets/extra3.jpg" data-lightbox="farm" data-title="Juveniles growing fast" class="gallery-item">
+          <img src="assets/extra3.jpg" alt="Juveniles" loading="lazy">
+        </a> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-gradient-to-r from-primary to-emerald-700 text-white">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-8">
+        Ready to Start Your Own Success Story?
+      </h2>
+      <p class="text-xl mb-10 opacity-90">
+        Join hundreds of profitable farmers who started with our fingerlings
+      </p>
+      <a href="https://wa.me/233555317397" target="_blank" 
+         class="bg-white text-primary hover:bg-gray-100 font-black text-xl sm:text-2xl py-6 px-12 rounded-2xl shadow-2xl transition inline-flex items-center gap-4">
+        <i class="fab fa-whatsapp text-4xl text-green-500"></i>
+        Order Fingerlings Now
+      </a>
+    </div>
+  </section>
+
+<!-- FOOTER - Perfectly responsive -->
+  <footer class="bg-primary text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+        <div>
+          <img src="assets/logo.png" alt="Logo" class="h-12 mx-auto md:mx-0 mb-4">
+          <p class="text-gray-300 text-sm">Premium fingerlings • Expert training • Nationwide delivery</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li><a href="pricing.html" class="hover:text-accent">Pricing</a></li>
+            <li><a href="training.html" class="hover:text-accent">Training</a></li>
+            <li><a href="gallery.html" class="hover:text-accent">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Contact</h3>
+          <p class="text-gray-300 text-sm">Medie Kotoku Road<br>Ghana</p>
+          <a href="https://wa.me/233555317397" class="mt-4 inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 px-5 py-3 rounded-lg text-sm font-bold">
+            <i class="fab fa-whatsapp"></i> +233 555 317 397
+          </a>
+        </div>
+      </div>
+      <div class="mt-10 pt-8 border-t border-emerald-800 text-center text-gray-400 text-sm">
+        © 2025 Triumph Farms & Consultation. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/233555317397" target="_blank" class="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-4xl z-40 transition hover:scale-110">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+  <script>
+    lightbox.option({
+      resizeDuration: 300,
+      wrapAround: true,
+      disableScrolling: true,
+      fitImagesInViewport: true
+    });
+
+    function openMenu() {
+      document.getElementById('mobileSidebar').classList.remove('-translate-x-full');
+      document.getElementById('menuOverlay').classList.remove('hidden');
+    }
+    function closeMenu() {
+      document.getElementById('mobileSidebar').classList.add('-translate-x-full');
+      document.getElementById('menuOverlay').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

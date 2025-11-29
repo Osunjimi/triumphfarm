@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services | Triumph Farms & Consultation</title>
+  <meta name="description" content="Premium catfish fingerlings supply, professional farm setup, hands-on training, and safe nationwide delivery across Ghana."/>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0F4C3A',
+            accent: '#10B981',
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="shortcut icon" href="assets//logo.png" type="image/x-icon">
+
+  <style>
+      body{
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .nav-link {
+      position: relative;
+      transition: color 0.3s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 3px;
+      bottom: -8px;
+      left: 0;
+      background-color: #10B981;
+      transition: width 0.4s ease;
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+    .nav-link.active {
+      color: #10B981;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800 antialiased overflow-x-hidden">
+
+  <!-- Mobile Menu Overlay -->
+  <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-70 z-40 hidden" onclick="closeMenu()"></div>
+
+  <!-- Mobile Sidebar with Close Button -->
+  <aside id="mobileSidebar" class="fixed top-0 left-0 h-screen w-80 max-w-[90vw] bg-primary text-white transform -translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
+    <div class="flex items-center justify-between p-6 border-b border-emerald-800">
+      <img src="assets/logo.png" alt="Triumph Farms" class="h-12">
+      <button onclick="closeMenu()" class="text-3xl hover:text-accent transition">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <nav class="mt-6 text-lg font-medium">
+      <a href="index.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Home</a>
+      <a href="services.html" class="block py-4 px-8 bg-emerald-800 font-bold">Services</a>
+      <a href="pricing.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Pricing</a>
+      <a href="training.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Training</a>
+      <a href="blog.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Blog</a>
+      <a href="gallery.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Gallery</a>
+      <a href="contact.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Header (Same as Homepage) -->
+  <header class="sticky top-0 bg-white/95 backdrop-blur-sm shadow-lg z-30 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <button onclick="openMenu()" class="lg:hidden text-3xl text-primary hover:text-accent">
+        <i class="fas fa-bars"></i>
+      </button>
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Triumph Farms" class="h-12 sm:h-14">
+      </a>
+      <nav class="hidden lg:flex items-center space-x-8 xl:space-x-10 text-lg font-semibold">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="training.html" class="nav-link">Training</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link text-accent font-bold">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner for Services Page -->
+  <!-- <section class="relative bg-gradient-to-br from-primary to-emerald-800 text-white py-32">
+    <div class="absolute inset-0 bg-black opacity-40"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight">
+        Our Services
+      </h1>
+      <p class="mt-6 text-xl sm:text-2xl opacity-90 max-w-3xl mx-auto">
+        From premium fingerlings to full farm setup — we provide everything you need to succeed in catfish farming.
+      </p>
+    </div>
+  </section> -->
+
+  <!-- Services Grid -->
+  <section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
+
+        <!-- Service 1 -->
+        <div class="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+          <div class="bg-gradient-to-r from-accent to-emerald-600 p-8 text-white">
+            <div class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-4xl font-bold">
+              <i class="fas fa-fish"></i>
+            </div>
+            <h3 class="text-3xl font-bold mt-6">Fingerlings Supply</h3>
+          </div>
+          <div class="p-10">
+            <p class="text-gray-700 leading-relaxed">
+              We breed and supply <strong>high-quality African catfish fingerlings and juveniles</strong> (4–6 weeks old) that are:
+            </p>
+            <ul class="mt-6 space-y-3 text-gray-600">
+              <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> Pellet-trained & fast-growing</li>
+              <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> 99.9% survival rate guarantee</li>
+              <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> Disease-free & uniformly sized</li>
+              <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> Available all year round</li>
+            </ul>
+            <a href="pricing.html" class="mt-8 inline-block text-accent font-bold hover:underline">
+              View Current Prices →
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+          <div class="bg-gradient-to-r from-primary to-emerald-900 p-8 text-white">
+            <div class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-4xl font-bold">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3 class="text-3xl font-bold mt-6">Farm Setup & Construction</h3>
+          </div>
+          <div class="p-10">
+            <p class="text-gray-700 leading-relaxed">
+              Let us build your profitable fish farm from scratch or upgrade your existing one.
+            </p>
+            <ul class="mt-6 space-y-3 text-gray-600">
+              <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> Earthen pond construction</li>
+              <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> Concrete & tarpaulin tanks</li>
+              <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> Aeration & filtration systems</li>
+              <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> Water quality management setup</li>
+            </ul>
+            <a href="https://wa.me/233555317397" class="mt-8 inline-block text-accent font-bold hover:underline">
+              Get a Free Quote →
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+          <div class="bg-gradient-to-r from-blue-700 to-accent p-8 text-white">
+            <div class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-4xl font-bold">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h3 class="text-3xl font-bold mt-6">Hands-On Training</h3>
+          </div>
+          <div class="p-10">
+            <p class="text-gray-700 leading-relaxed">
+              Learn profitable catfish farming directly from experienced experts.
+            </p>
+            <ul class="mt-6 space-y-3 text-gray-600">
+              <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> 2-Day practical training at our farm</li>
+              <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> Feeding, sorting, disease control</li>
+              <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> Harvesting & marketing strategies</li>
+              <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> Post-training support included</li>
+            </ul>
+            <a href="training.html" class="mt-8 inline-block text-accent font-bold hover:underline">
+              View Training Schedule →
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+          <div class="bg-gradient-to-r from-orange-600 to-red-600 p-8 text-white">
+            <div class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-4xl font-bold">
+              <i class="fas fa-truck"></i>
+            </div>
+            <h3 class="text-3xl font-bold mt-6">Nationwide Delivery</h3>
+          </div>
+          <div class="p-10">
+            <p class="text-gray-700 leading-relaxed">
+              We deliver healthy fingerlings safely to your farm — anywhere in Ghana.
+            </p>
+            <ul class="mt-6 space-y-3 text-gray-600">
+              <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> Oxygenated bags & professional handling</li>
+              <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> Door-to-door delivery service</li>
+              <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> Acclimatization guidance provided</li>
+              <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> Delivery cost based on location</li>
+            </ul>
+            <a href="https://wa.me/233555317397" class="mt-8 inline-block text-accent font-bold hover:underline">
+              Place Your Order →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-primary to-emerald-700 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl sm:text-5xl font-extrabold mb-8">
+        Ready to Start or Scale Your Fish Farm?
+      </h2>
+      <p class="text-xl mb-10 opacity-90">
+        Contact us today for fingerlings, training, or full farm setup.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href="https://wa.me/233555317397" target="_blank" class="bg-white text-primary hover:bg-gray-100 font-bold py-6 px-12 rounded-xl text-xl shadow-2xl transition flex items-center justify-center gap-4">
+          <i class="fab fa-whatsapp text-3xl"></i>
+          WhatsApp: +233 555 317 397
+        </a>
+        <a href="pricing.html" class="bg-accent hover:bg-emerald-600 text-white font-bold py-6 px-12 rounded-xl text-xl shadow-2xl transition">
+          View Prices
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (Same as Homepage) -->
+  <footer class="bg-primary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div>
+          <img src="assets/logo.png" alt="Triumph Farms" class="h-14 mb-6">
+          <p class="text-gray-300 leading-relaxed">
+            Your trusted partner in profitable catfish farming across Ghana.<br>
+            Premium fingerlings • Expert training • Nationwide delivery
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+          <ul class="space-y-4 text-gray-300">
+            <li><a href="pricing.html" class="hover:text-accent transition">Pricing</a></li>
+            <li><a href="training.html" class="hover:text-accent transition">Training</a></li>
+            <li><a href="gallery.html" class="hover:text-accent transition">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-6">Visit Us</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Medie Kotoku Road<br>
+            <em>Search "M & D Medical Center Kotoku Road" on Google Maps</em>
+          </p>
+          <p class="mt-6">
+            <a href="https://wa.me/233555317397" class="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold transition">
+              <i class="fab fa-whatsapp"></i> +233 555 317 397
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="mt-16 pt-8 border-t border-emerald-800 text-center text-gray-400">
+        <p>© 2025 Triumph Farms & Consultation. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/233555317397" target="_blank" class="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-4xl z-40 transition hover:scale-110">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    function openMenu() {
+      document.getElementById('mobileSidebar').classList.remove('-translate-x-full');
+      document.getElementById('menuOverlay').classList.remove('hidden');
+    }
+    function closeMenu() {
+      document.getElementById('mobileSidebar').classList.add('-translate-x-full');
+      document.getElementById('menuOverlay').classList.add('hidden');
+    }
+
+    // Auto-highlight current page
+    document.addEventListener('DOMContentLoaded', () => {
+      const path = location.pathname.split('/').pop();
+      document.querySelectorAll('.nav-link').forEach(link => {
+        if (link.getAttribute('href') === path) link.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

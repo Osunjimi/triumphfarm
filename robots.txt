@@ -1,0 +1,1 @@
+User-agent: *\nDisallow:\nSitemap: https://silver-travesseiro-4181fe.netlify.app/sitemap.xml\n

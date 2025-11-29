@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Triumph Farms Ghana | Instant Response</title>
+  <meta name="description" content="Order fingerlings, book training or consultation. We reply in under 8 minutes on WhatsApp — 7 days a week."/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0F4C3A',
+            accent: '#10B981',
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="assets//logo.png" type="image/x-icon">
+  <style>
+    body { overflow-x: hidden; font-family: 'Courier New', Courier, monospace; }
+    .nav-link {
+      position: relative;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 4px;
+      bottom: -8px;
+      left: 50%;
+      background: #10B981;
+      transition: all 0.4s;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after { width: 100%; }
+    .nav-link.active { color: #10B981; }
+
+    .input-focus {
+      transition: all 0.4s ease;
+    }
+    .input-focus:focus {
+      transform: translateY(-4px);
+      border-color: #10B981;
+      box-shadow: 0 20px 40px rgba(16,185,129,0.2);
+      outline: none;
+    }
+
+    .card-float {
+      transition: all 0.6s ease;
+    }
+    .card-float:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-gray-50 to-white min-h-screen">
+
+  <!-- Mobile Menu Overlay -->
+  <div id="menuOverlay" class="fixed inset-0 bg-black/70 z-40 hidden" onclick="closeMenu()"></div>
+
+  <!-- Mobile Sidebar -->
+  <aside id="mobileSidebar" class="fixed top-0 left-0 h-screen w-80 max-w-[85vw] bg-primary text-white transform -translate-x-full transition-transform duration-500 z-50 shadow-2xl">
+    <div class="p-5 border-b border-emerald-800 flex justify-between items-center">
+      <img src="assets/logo.png" alt="Triumph Farms" class="h-12">
+      <button onclick="closeMenu()" class="text-4xl"><i class="fas fa-xmark"></i></button>
+    </div>
+    <nav class="mt-6 text-lg font-bold">
+      <a href="index.html" class="block py-4 px-8 hover:bg-emerald-800">Home</a>
+      <a href="services.html" class="block py-4 px-8 hover:bg-emerald-800">Services</a>
+      <a href="pricing.html" class="block py-4 px-8 hover:bg-emerald-800">Pricing</a>
+      <a href="training.html" class="block py-4 px-8 hover:bg-emerald-800">Training</a>
+      <a href="gallery.html" class="block py-4 px-8 hover:bg-emerald-800">Gallery</a>
+      <a href="contact.html" class="block py-4 px-8 bg-emerald-800 text-accent font-black">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Header -->
+  <header class="sticky top-0 bg-white/95 backdrop-blur-xl shadow-lg z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <button onclick="openMenu()" class="lg:hidden text-3xl text-primary"><i class="fas fa-bars"></i></button>
+      <a href="index.html" class="flex-shrink-0">
+        <img src="assets/logo.png" alt="Triumph Farms" class="h-12 sm:h-14">
+      </a>
+      <nav class="hidden lg:flex items-center gap-8 xl:gap-12 text-lg font-bold">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="training.html" class="nav-link">Training</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center justify-center text-white text-center px-4 sm:px-6">
+    <img src="assets/contact-hero.jpg" alt="Fish Farm" class="absolute inset-0 w-full h-full object-cover brightness-50">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary/90 to-emerald-900/95"></div>
+    
+    <div class="relative z-10 max-w-4xl mx-auto">
+      <div class="inline-flex items-center gap-3 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full text-lg font-bold mb-8">
+        <i class="fas fa-bolt text-yellow-400"></i>
+        Reply in <strong class="text-yellow-300">Under 8 Minutes</strong>
+      </div>
+
+      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight">
+        Your Farm<br><span class="text-accent">Starts Here</span>
+      </h1>
+
+      <p class="mt-8 text-lg sm:text-xl md:text-2xl font-medium max-w-2xl mx-auto opacity-95">
+        One message = thousands of fingerlings = millions in profit
+      </p>
+
+      <a href="https://wa.me/233555317397" target="_blank"
+         class="mt-12 inline-flex items-center gap-4 bg-white text-primary font-black text-xl sm:text-2xl py-6 px-10 sm:px-16 rounded-3xl shadow-2xl hover:shadow-3xl transition-all hover:scale-105">
+        <i class="fab fa-whatsapp text-5xl sm:text-6xl text-green-500"></i>
+        Chat Now — Instant Reply
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION - FULLY RESPONSIVE -->
+  <section class="py-16 lg:py-24 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16">
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-primary">Get In Touch</h2>
+        <p class="mt-4 text-lg sm:text-xl text-gray-700">We reply fast — 7 days a week</p>
+      </div>
+
+      <!-- Form -->
+      <div class="bg-white rounded-3xl shadow-xl p-6 sm:p-10 lg:p-12 card-float mb-16">
+        <form action="https://formspree.io/f/xdkrebve" method="POST" class="space-y-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-lg font-bold text-primary mb-2">Full Name *</label>
+              <input type="text" name="name" required placeholder="Kwame Boateng"
+                     class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 input-focus text-base">
+            </div>
+            <div>
+              <label class="block text-lg font-bold text-primary mb-2">Phone / WhatsApp *</label>
+              <input type="text" name="phone" required placeholder="+233 55 531 7397"
+                     class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 input-focus text-base">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-lg font-bold text-primary mb-2">Email (optional)</label>
+            <input type="email" name="email" placeholder="you@example.com"
+                   class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 input-focus text-base">
+          </div>
+
+          <div>
+            <label class="block text-lg font-bold text-primary mb-2">I Need Help With *</label>
+            <select name="subject" required class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 input-focus text-base">
+              <option value="">Select your need...</option>
+              <option>Order Fingerlings</option>
+              <option>Book Training</option>
+              <option>Pond Construction</option>
+              <option>Full Farm Setup</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-lg font-bold text-primary mb-2">Your Message</label>
+            <textarea name="message" rows="5" placeholder="Hi, I want to order 10,000 fingerlings..."
+                      class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 input-focus text-base resize-none"></textarea>
+          </div>
+
+          <button type="submit"
+                  class="w-full bg-gradient-to-r from-accent to-emerald-600 text-white font-black text-xl py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+            Send Message — Reply in Minutes
+          </button>
+        </form>
+      </div>
+
+      <!-- Info Cards -->
+      <div class="space-y-10">
+
+        <!-- Location Card -->
+        <div class="bg-gradient-to-br from-primary to-emerald-800 text-white rounded-3xl p-8 shadow-xl card-float">
+          <div class="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+            <div class="w-20 h-20 bg-white/20 rounded-2xl flex-shrink-0 flex items-center justify-center text-4xl">
+              <i class="fas fa-location-dot"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-black mb-2">Farm Location</h3>
+              <p class="text-lg opacity-95">Medie Kotoku Road<br>Greater Accra Region, Ghana</p>
+              <p class="mt-3 text-base italic opacity-90">
+                Search: <strong>"M & D Medical Center Kotoku Road"</strong> on Google Maps
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- WhatsApp Card -->
+        <div class="bg-gradient-to-br from-green-500 to-emerald-600 text-white rounded-3xl p-8 shadow-xl card-float">
+          <div class="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+            <div class="w-20 h-20 bg-white/25 rounded-2xl flex-shrink-0 flex items-center justify-center text-5xl">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-black mb-2">WhatsApp / Call</h3>
+              <a href="https://wa.me/233555317397" class="text-3xl sm:text-4xl font-black hover:underline block">+233 555 317 397</a>
+              <p class="mt-2 text-lg opacity-90">6 AM – 9 PM • 7 days a week</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- WhatsApp Preview -->
+        <div class="bg-gradient-to-br from-[#25D366] to-[#128C7E] text-white rounded-3xl p-8 shadow-xl card-float">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 bg-white/30 rounded-full flex items-center justify-center text-xl font-bold">TF</div>
+            <div>
+              <p class="text-xl sm:text-2xl font-black">Triumph Farms</p>
+              <p class="text-base opacity-90">Typically replies in minutes</p>
+            </div>
+          </div>
+          <p class="text-lg mb-6">
+            Hello! How can we help you start or scale your catfish farm today?
+          </p>
+          <a href="https://wa.me/233555317397" class="bg-white text-green-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition">
+            Open WhatsApp Chat
+          </a>
+        </div>
+
+        <!-- Map -->
+        <div class="rounded-3xl overflow-hidden shadow-2xl card-float">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.304!2d-0.345!3d5.678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9d8b8b8b8b8b%3A0x9c8f8e8d8c8b8e8f!2sM%20%26%20D%20Medical%20Center!5e0!3m2!1sen!2sgh"
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="py-20 lg:py-28 bg-gradient-to-r from-primary to-emerald-700 text-white text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl sm:text-5xl lg:text-7xl font-black mb-6">
+        Don’t Wait.<br><span class="text-accent">Message Us Now</span>
+      </h2>
+      <p class="text-xl sm:text-2xl mb-10 opacity-90">
+        Your profitable fish farm starts with one chat
+      </p>
+      <a href="https://wa.me/233555317397" target="_blank"
+         class="inline-flex items-center gap-5 bg-white text-primary font-black text-2xl py-8 px-16 rounded-3xl shadow-2xl hover:scale-110 transition">
+        <i class="fab fa-whatsapp text-6xl text-green-500"></i>
+        Start Chat Now
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER - Fully Responsive -->
+  <footer class="bg-primary text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+        <div>
+          <img src="assets/logo.png" alt="Logo" class="h-12 mx-auto md:mx-0 mb-4">
+          <p class="text-gray-300">Premium fingerlings • Expert training • Nationwide delivery</p>
+        </div>
+        <div>
+          <h3 class="font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-gray-300">
+            <li><a href="pricing.html" class="hover:text-accent">Pricing</a></li>
+            <li><a href="training.html" class="hover:text-accent">Training</a></li>
+            <li><a href="gallery.html" class="hover:text-accent">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold mb-4">Contact</h3>
+          <p class="text-gray-300 text-sm">Medie Kotoku Road<br>Greater Accra, Ghana</p>
+          <a href="https://wa.me/233555317397" class="mt-4 inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold">
+            <i class="fab fa-whatsapp text-xl"></i> +233 555 317 397
+          </a>
+        </div>
+      </div>
+      <div class="mt-10 text-center text-gray-400 text-sm">
+        © 2025 Triumph Farms & Consultation. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/233555317397" target="_blank"
+     class="fixed bottom-4 right-4 bg-green-600 hover:bg-green-700 text-white w-14 h-14 sm:w-16 sm:h-16 rounded-full shadow-2xl flex items-center justify-center text-4xl z-50 hover:scale-110 transition">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    function openMenu() {
+      document.getElementById('mobileSidebar').classList.remove('-translate-x-full');
+      document.getElementById('menuOverlay').classList.remove('hidden');
+    }
+    function closeMenu() {
+      document.getElementById('mobileSidebar').classList.add('-translate-x-full');
+      document.getElementById('menuOverlay').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

@@ -23,15 +23,16 @@
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="shortcut icon" href="assets//logo.png" type="image/x-icon">
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    html, body { overflow-x: hidden; font-family: 'Courier New', Courier, monospace; }
+       body{
+      font-family: 'Courier New', Courier, monospace;
+    }
     .nav-link { position:relative; transition:color .3s; }
     .nav-link::after { content:''; position:absolute; width:0; height:3px; bottom:-8px; left:0; background:#10B981; transition:width .4s ease; }
     .nav-link:hover::after, .nav-link.active::after { width:100%; }
     .nav-link.active { color:#10B981; font-weight:700; }
-
     /* Fix large step numbers on small screens */
     .step-number {
       font-size: 5rem !important;
@@ -89,7 +90,7 @@
   <!-- HERO - Perfect on mobile -->
   <section class="relative min-h-screen flex items-center justify-center text-white">
     <div class="absolute inset-0">
-      <img src="assets/training-hero.jpg" alt="Training" class="w-full h-full object-cover brightness-50">
+      <img src="assets/fishes.jpg" alt="Training" class="w-full h-full object-cover brightness-50">
       <div class="absolute inset-0 bg-primary/90"></div>
     </div>
     <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
@@ -104,7 +105,7 @@
         Achieve <strong>99.9% survival</strong> • Reach 1.5kg in 5–6 months
       </p>
       <div class="mt-10">
-        <a href="#guide" class="bg-accent text-white font-bold py-5 px-10 rounded-2xl text-lg shadow-2xl hover:bg-emerald-600 transition inline-flex items-center gap-3">
+        <a href="guide.html" class="bg-accent text-white font-bold py-5 px-10 rounded-2xl text-lg shadow-2xl hover:bg-emerald-600 transition inline-flex items-center gap-3">
           Start Reading Guide Now <i class="fas fa-arrow-down"></i>
         </a>
       </div>
@@ -149,8 +150,8 @@
           <h3 class="relative z-10 text-2xl sm:text-3xl font-extrabold mb-4">First Week Care</h3>
           <ul class="space-y-3 text-gray-700 text-sm sm:text-base">
             <li>No feeding on Day 1</li>
-            <li>Start Day 2 with 0.5mm feed</li>
-            <li>Feed 4–6 times daily</li>
+            <li>Start Day 2 with 1.5-2mm feed</li>
+            <li>Feed 2–3 times daily</li>
             <li>Add mild salt first 3 days</li>
           </ul>
         </div>
@@ -206,7 +207,7 @@
   </section>
 
   <!-- TRAINING OFFER - Mobile friendly -->
-  <section class="py-16 sm:py-24 bg-gradient-to-r from-primary to-emerald-700 text-white">
+  <!-- <section class="py-16 sm:py-24 bg-gradient-to-r from-primary to-emerald-700 text-white">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6">Want Hands-On Training?</h2>
       <p class="text-lg sm:text-2xl mb-10 opacity-90">
@@ -235,48 +236,104 @@
         Book Seat (₵450)
       </a>
     </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="py-16 sm:py-24 bg-gray-900 text-white">
-    <div class="max-w-4xl mx-auto text-center px-6">
-      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6">Ready to Start Farming?</h2>
-      <p class="text-xl sm:text-2xl mb-10">Get premium fingerlings + free lifetime support</p>
-      <a href="https://wa.me/233555317397" class="bg-green-600 hover:bg-green-700 font-black text-xl sm:text-2xl py-6 px-12 rounded-2xl shadow-2xl transition inline-flex items-center gap-4">
-        <i class="fab fa-whatsapp text-4xl sm:text-5xl"></i> Message Us Now
-      </a>
+  </section> -->
+<!-- TRAINING OFFER - Mobile friendly -->
+<section class="py-16 sm:py-24 bg-white text-gray-900">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6">Want Hands-On Training?</h2>
+    <p class="text-lg sm:text-2xl mb-10 opacity-90">
+      2-Day Practical Training • Next: <strong>Dec 13–14, 2025</strong>
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
+      <div class="bg-gray-100 rounded-2xl p-6">
+        <i class="fas fa-users text-5xl mb-3"></i>
+        <h4 class="text-xl font-bold">Small Groups</h4>
+        <p class="text-sm">Max 15 farmers</p>
+      </div>
+      <div class="bg-gray-100 rounded-2xl p-6">
+        <i class="fas fa-hands-helping text-5xl mb-3"></i>
+        <h4 class="text-xl font-bold">100% Practical</h4>
+        <p class="text-sm">Real farm work</p>
+      </div>
+      <div class="bg-gray-100 rounded-2xl p-6">
+        <i class="fas fa-certificate text-5xl mb-3"></i>
+        <h4 class="text-xl font-bold">Certificate + Feed</h4>
+        <p class="text-sm">Take home pack</p>
+      </div>
     </div>
-  </section>
+    <a href="https://wa.me/233555317397?text=Hello!%20I%20want%20to%20book%20the%20December%20training" 
+       class="bg-primary text-white font-black text-lg sm:text-2xl py-6 px-10 sm:px-16 rounded-2xl shadow-2xl hover:bg-primary/80 transition inline-flex items-center gap-4">
+      <i class="fab fa-whatsapp text-4xl sm:text-5xl text-green-500"></i>
+      Book Seat (₵450)
+    </a>
+  </div>
+</section>
 
-  <!-- FOOTER - Perfectly responsive -->
-  <footer class="bg-primary text-white py-12">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+  <!-- FOOTER -->
+   <footer class="bg-primary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
-          <img src="assets/logo.png" alt="Logo" class="h-12 mx-auto md:mx-0 mb-4">
-          <p class="text-gray-300 text-sm">Premium fingerlings • Expert training • Nationwide delivery</p>
+          <img src="assets/logo.png" alt="Triumph Farms" class="h-14 mb-6">
+          <p class="text-gray-300 leading-relaxed">
+            Your trusted partner in profitable catfish farming across Ghana.<br>
+            Premium fingerlings • Expert training • Nationwide delivery
+          </p>
+          <div class="mt-6 flex gap-4">
+            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/233555317397" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-500 transition">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
         </div>
+
         <div>
-          <h3 class="text-lg font-bold mb-4">Quick Links</h3>
-          <ul class="space-y-2 text-gray-300 text-sm">
-            <li><a href="pricing.html" class="hover:text-accent">Pricing</a></li>
-            <li><a href="training.html" class="hover:text-accent">Training</a></li>
-            <li><a href="gallery.html" class="hover:text-accent">Gallery</a></li>
+          <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+          <ul class="space-y-4 text-gray-300">
+            <li><a href="services.html" class="hover:text-accent transition">Services</a></li>
+            <li><a href="pricing.html" class="hover:text-accent transition">Pricing</a></li>
+            <li><a href="training.html" class="hover:text-accent transition">Traning</a></li>
+            <li><a href="blog.html" class="hover:text-accent transition">Blog</a></li>
+            <li><a href="gallery.html" class="hover:text-accent transition">Gallery</a></li>
           </ul>
         </div>
+
         <div>
-          <h3 class="text-lg font-bold mb-4">Contact</h3>
-          <p class="text-gray-300 text-sm">Medie Kotoku Road<br>Ghana</p>
-          <a href="https://wa.me/233555317397" class="mt-4 inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 px-5 py-3 rounded-lg text-sm font-bold">
-            <i class="fab fa-whatsapp"></i> +233 555 317 397
-          </a>
+          <h3 class="text-xl font-bold mb-6">Visit Us</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Medie Kotoku Road<br>
+            <em>Search "M & D Medical Center Kotoku Road" on Google Maps</em>
+          </p>
+          <p class="mt-6">
+            <a href="https://wa.me/233555317397" class="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold transition">
+              <i class="fab fa-whatsapp"></i> +233 555 317 397
+            </a>
+          </p>
         </div>
       </div>
-      <div class="mt-10 pt-8 border-t border-emerald-800 text-center text-gray-400 text-sm">
-        © 2025 Triumph Farms & Consultation. All rights reserved.
+      <div class="mt-16 pt-8 border-t border-emerald-800 text-center text-gray-400">
+    <p>© 2025 Triumph Farms & Consultation. All rights reserved. | Premium Catfish Farming in Ghana</p>
+
+      <div class="mt-4">
+        Designed by
+        <a 
+          href="https://personal-portfolio-osunjimi-ibrahims-projects.vercel.app/" 
+          target="_blank" 
+          class="text-gray-300 hover:text-accent font-semibold transition"
+        >
+          Ibrahim
+        </a>
       </div>
     </div>
+
+    </div>
   </footer>
+
 
   <!-- Floating WhatsApp -->
   <a href="https://wa.me/233555317397" target="_blank" class="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white w-14 h-14 sm:w-16 sm:h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl sm:text-4xl z-40 transition hover:scale-110">

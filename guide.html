@@ -1,23 +1,841 @@
-<!doctype html><html><head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Triumph Farms & Consultation – Aquaculture services, training, fish farming guides, consultation and farm development solutions in Ghana.">
-<meta name="keywords" content="fish farming, aquaculture, consultation, triumph farms, fingerlings, pond construction">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Complete Catfish Farming Training Manual 2025 — Triumph Farms Ghana</title>
+  <meta name="description" content="Free 10-step catfish farming masterclass: from 5g fingerlings to 2kg in 6 months. Practical, step-by-step guide used by hundreds of Ghanaian farmers."/>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1322505681860168" crossorigin="anonymous"></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Catfish Care Guide</title><link rel="stylesheet" href="styles.css"></head><body>
-<div id="sidebar" style="position:fixed;left:0;top:0;width:250px;height:100%;background:#111;padding-top:60px;transform:translateX(-250px);transition:0.3s;z-index:9999;">
-<a href="index.html" style="color:white;padding:10px;display:block;">Home</a>
-<a href="about.html" style="color:white;padding:10px;display:block;">About</a>
-<a href="services.html" style="color:white;padding:10px;display:block;">Services</a>
-<a href="pricing.html" style="color:white;padding:10px;display:block;">Pricing</a>
-<a href="training.html" style="color:white;padding:10px;display:block;">Training</a>
-<a href="blog.html" style="color:white;padding:10px;display:block;">Blog</a>
-<a href="gallery.html" style="color:white;padding:10px;display:block;">Gallery</a>
-<a href="contact.html" style="color:white;padding:10px;display:block;">Contact</a>
-</div>
-<div id="menuBtn" onclick="document.getElementById('sidebar').style.transform='translateX(0)'" 
-     style="position:fixed;top:20px;left:20px;font-size:30px;cursor:pointer;z-index:10000;color:#000;">☰
-</div>
-<div id="closeBtn" onclick="document.getElementById('sidebar').style.transform='translateX(-250px)'" 
-     style="position:fixed;top:20px;left:60px;font-size:30px;cursor:pointer;z-index:10000;color:#000;">✕
-</div>
-<main class="section"><h1>Triumph Farms — Catfish Fingerling Care Guide</h1><h2>Pond preparation</h2><p>Clean, disinfect, liming, fill, stabilize water for 24-48 hours.</p><h2>Acclimatization</h2><p>Float bags 10-20 minutes, mix pond water gradually, release gently.</p><h2>Feeding</h2><p>Weeks 0-4: 45% protein 3-4x daily. Weeks 4-8: 35-40% protein 2-3x daily.</p><h2>Water quality</h2><p>pH 6.5-7.5, temp 26-29°C, keep ammonia low.</p><h2>Health & disease</h2><p>Signs: gasping, red patches. Actions: aeration, partial water change, isolate sick fish.</p></main><script src="assets/cookie.js" defer></script>\n</body></html>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="assets//logo.png" type="image/x-icon">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0F4C3A',
+            accent: '#10B981',
+            danger: '#EF4444',
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+  <style>
+    :root { --container: 1400px; }
+    .nav-link { position:relative; transition:color .3s; }
+    .nav-link::after { content:''; position:absolute; width:0; height:3px; bottom:-8px; left:0; background:#10B981; transition:width .4s ease; }
+    .nav-link:hover::after, .nav-link.active::after { width:100%; }
+    .nav-link.active { color:#10B981; font-weight:700; }
+
+    .step-number {
+      @apply absolute top-4 right-6 text-9xl font-black text-primary opacity-5 pointer-events-none select-none hidden lg:block;
+    }
+    .hero-bg { background: linear-gradient(180deg, rgba(15,76,58,0.9), rgba(15,76,58,0.95)), url('assets/training-hero.jpg') center/cover no-repeat; }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <!-- Mobile Menu Overlay -->
+  <div id="menuOverlay" class="fixed inset-0 bg-black/70 z-40 hidden" onclick="closeMenu()"></div>
+
+  <!-- Mobile Sidebar -->
+  <aside id="mobileSidebar" class="fixed top-0 left-0 h-screen w-80 max-w-[90vw] bg-primary text-white transform -translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
+    <div class="flex items-center justify-between p-6 border-b border-emerald-800">
+      <img src="assets/logo.png" alt="Logo" class="h-12">
+      <button onclick="closeMenu()" class="text-3xl hover:text-accent"><i class="fas fa-times"></i></button>
+    </div>
+    <nav class="mt-6 text-lg font-medium">
+      <a href="index.html" class="block py-4 px-8 hover:bg-emerald-800">Home</a>
+      <a href="services.html" class="block py-4 px-8 hover:bg-emerald-800">Services</a>
+      <a href="pricing.html" class="block py-4 px-8 hover:bg-emerald-800">Pricing</a>
+      <a href="training.html" class="block py-4 px-8 bg-emerald-800 font-bold">Training</a>
+      <a href="gallery.html" class="block py-4 px-8 hover:bg-emerald-800">Gallery</a>
+      <a href="contact.html" class="block py-4 px-8 hover:bg-emerald-800">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Header - EXACT SAME AS YOUR SECOND PAGE -->
+  <header class="sticky top-0 bg-white/95 backdrop-blur-sm shadow-lg z-30 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <button onclick="openMenu()" class="lg:hidden text-3xl text-primary"><i class="fas fa-bars"></i></button>
+      <a href="index.html"><img src="assets/logo.png" alt="Triumph Farms" class="h-12 sm:h-14"></a>
+      <nav class="hidden lg:flex items-center space-x-6 xl:space-x-10 text-lg font-semibold">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="training.html" class="nav-link active">Training</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link text-accent font-bold">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center justify-center text-center text-white hero-bg">
+    <div class="max-w-5xl mx-auto px-6 py-20">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+        Complete Catfish Farming<br><span class="text-accent">Training Manual — 2025</span>
+      </h1>
+      <p class="mt-6 text-lg sm:text-xl max-w-3xl mx-auto font-medium opacity-95">
+        A practical 10-step guide: from 5 g fingerlings to market size — designed for Ghanaian farmers who want predictable survival and steady profit.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#guide" class="inline-flex items-center gap-3 bg-white text-primary font-bold text-lg py-4 px-8 rounded-xl shadow-lg hover:scale-105 transition">
+          Start Reading Guide <i class="fas fa-arrow-down"></i>
+        </a>
+        <a href="https://wa.me/233555317397" class="inline-flex items-center gap-3 bg-accent text-white font-bold text-lg py-4 px-8 rounded-xl shadow-lg hover:brightness-110 transition">
+          Chat With Expert <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN GUIDE -->
+  <main id="guide" class="py-16 lg:pt-24">
+    <div class="max-w-[var(--container)] mx-auto px-6 lg:px-8">
+      <div class="bg-white rounded-2xl shadow-xl p-8 mb-16">
+        <h2 class="text-3xl font-extrabold text-primary mb-4">10-Step Catfish Farming Training — Quick Overview</h2>
+        <p class="text-lg text-gray-700 mb-8">
+          This practical manual presents concise, actionable steps for fingerling care, pond preparation, feeding, water management, grading, disease prevention and harvesting. Each step contains daily & weekly tasks and practical tips you can apply on day one.
+        </p>
+        <div class="flex flex-wrap gap-3 justify-center">
+          <a href="#step-1" class="px-5 py-3 rounded-full bg-gray-100 hover:bg-accent hover:text-white text-sm font-bold transition">1. Fingerlings</a>
+          <a href="#step-2" class="px-5 py-3 rounded-full bg-gray-100 hover:bg-accent hover:text-white text-sm font-bold transition">2. Pond Prep</a>
+          <a href="#step-3" class="px-5 py-3 rounded-full bg-gray-100 hover:bg-accent hover:text-white text-sm font-bold transition">3. Stocking</a>
+          <a href="#step-4" class="px-5 py-3 rounded-full bg-gray-100 hover:bg-accent hover:text-white text-sm font-bold transition">4. Feeding</a>
+          <a href="#step-5" class="px-5 py-3 rounded-full bg-gray-100 hover:bg-accent hover:text-white text-sm font-bold transition">5. Water Mgmt</a>
+          <a href="#step-6" class="px-5 py-3 rounded-full bg-gray-100 hover:bg-accent hover:text-white text-sm font-bold transition">6. Grading</a>
+          <a href="#step-7" class="px-5 py-3 rounded-full bg-gray-100 hover:bg-accent hover:text-white text-sm font-bold transition">7. Biosecurity</a>
+          <a href="#step-8" class="px-5 py-3 rounded-full bg-gray-100 hover:bg-accent hover:text-white text-sm font-bold transition">8. Harvesting</a>
+          <a href="#step-9" class="px-5 py-3 rounded-full bg-gray-100 hover:bg-accent hover:text-white text-sm font-bold transition">9. Do's & Don'ts</a>
+          <a href="#step-10" class="px-5 py-3 rounded-full bg-gray-100 hover:bg-accent hover:text-white text-sm font-bold transition">10. Mistakes</a>
+        </div>
+      </div>
+
+      <!-- Step 1 -->
+      <article id="step-1" class="relative bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
+        <div class="p-8 lg:p-12">
+          <div class="flex flex-col sm:flex-row gap-6 items-start">
+            <div class="shrink-0">
+              <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl font-black shadow-lg">1</div>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-3xl font-extrabold text-gray-900 mb-4">Understanding Your Fingerlings</h3>
+              <p class="text-lg text-gray-700 leading-relaxed">
+                Fingerlings are the youngest and most sensitive stage of your fish. This stage determines how strong and uniform your stock will grow. With the right care in the first few days, your survival rate can be extremely high.
+              </p>
+              <div class="my-8 p-8 bg-primary/5 rounded-2xl border border-primary/10 text-center">
+                <p class="text-6xl font-black text-primary">95%+</p>
+                <p class="text-xl font-bold text-gray-800 mt-2">Achievable survival rate with proper early-stage handling</p>
+              </div>
+              <div class="grid md:grid-cols-2 gap-8 mt-8">
+                <ul class="space-y-4 text-lg">
+                  <li class="flex gap-3"><span class="text-accent text-2xl">•</span> Very delicate — handle them gently</li>
+                  <li class="flex gap-3"><span class="text-accent text-2xl">•</span> Highly sensitive to water changes</li>
+                  <li class="flex gap-3"><span class="text-accent text-2xl">•</span> Reduce stress — avoid unnecessary transfers</li>
+                  <li class="flex gap-3"><span class="text-accent text-2xl">•</span> Monitor daily for activity and feeding response</li>
+                </ul>
+                <div class="bg-gray-50 rounded-2xl p-6 border">
+                  <h4 class="text-xl font-bold mb-3">Do This First</h4>
+                  <p class="text-gray-700">Hold new fingerlings in a small quarantine tank for 5–7 days. Watch their movement, feeding pattern, and overall behavior before moving them to the main pond.</p>
+                </div>
+              </div>
+              <div class="mt-8">
+                <a href="https://wa.me/233555317397" class="inline-block bg-primary text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:bg-primary/90 transition">
+                  Need help? Chat with us on WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Step 2 -->
+      <article id="step-2" class="relative bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
+        <div class="p-8 lg:p-12">
+          <div class="flex flex-col sm:flex-row gap-6 items-start">
+            <div class="shrink-0">
+              <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl font-black shadow-lg">2</div>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-3xl font-extrabold text-gray-900 mb-4">Pond / Tank Preparation (7–14 Days Before Stocking)</h3>
+              <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                The condition of your pond or tank determines how well your fingerlings will settle when they arrive. Proper preparation eliminates harmful organisms, stabilizes your water, removes toxic build‑ups, and creates an environment where young fish can grow with minimal stress.
+                Most farms that experience high mortality usually skip key steps during preparation.
+              </p>
+              <div class="p-6 bg-primary/5 border border-primary/10 rounded-2xl mb-8">
+                <p class="text-xl font-bold">A well‑prepared pond reduces disease outbreaks by <span class="text-primary">70%–90%</span> and helps your fingerlings adapt faster.</p>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-50 rounded-xl p-6 border">
+                  <h4 class="font-bold text-lg">Clean & Disinfect</h4>
+                  <ul class="mt-3 space-y-2 text-sm text-gray-700">
+                    <li>• Drain pond completely</li>
+                    <li>• Remove sludge, mud, waste & old feed</li>
+                    <li>• Scrub walls and floor if possible</li>
+                    <li>• Disinfect with lime or salt depending on pond type</li>
+                    <li>• Rinse well to avoid chemical residues</li>
+                  </ul>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 border">
+                  <h4 class="font-bold text-lg">Sun‑Dry (Earthen Ponds)</h4>
+                  <p class="mt-3 text-sm text-gray-700">Allow 5–7 days of drying. Sunlight naturally kills parasites, fungus, bacteria, and harmful microbes. Drying also breaks down ammonia deposits.</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 border">
+                  <h4 class="font-bold text-lg">Fill the Pond</h4>
+                  <p class="mt-3 text-sm text-gray-700">Fill the pond 2–3 days before stocking. This helps chlorine evaporate from tap water and gives the water time to stabilize.</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 border">
+                  <h4 class="font-bold text-lg">Aeration</h4>
+                  <p class="mt-3 text-sm text-gray-700">Install aerators before stocking. Ensure dissolved oxygen stays above <strong>5 mg/L</strong>. Low oxygen is one of the fastest killers of fingerlings.</p>
+                </div>
+              </div>
+              <div class="mt-10 bg-gray-50 rounded-2xl p-6 border">
+                <h4 class="text-xl font-bold mb-4">Extra Things to Check Before Stocking</h4>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-700">
+                  <li>• Ensure no leaks or weak points in the pond walls</li>
+                  <li>• Confirm that predators (birds, frogs, snakes) cannot enter</li>
+                  <li>• Install nets or simple pond covers for added safety</li>
+                  <li>• Run aerators for at least 24 hours before fish arrive</li>
+                  <li>• Test temperature and pH in the morning and evening</li>
+                </ul>
+              </div>
+              <div class="mt-8">
+                <a href="https://wa.me/233555317397" class="inline-block bg-primary text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:bg-primary/90 transition">
+                  Need help preparing your pond? Message us on WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Step 3 -->
+    <article id="step-3" class="relative bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
+  <div class="p-6 sm:p-8 lg:p-12">
+    <div class="flex flex-col sm:flex-row gap-6 items-start">
+      
+      <!-- Step Circle -->
+      <div class="shrink-0 flex justify-center sm:block">
+        <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl sm:text-4xl font-black shadow-lg">
+          3
+        </div>
+      </div>
+      
+      <!-- Content -->
+      <div class="flex-1">
+        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4">
+          Ideal Stocking Practices
+        </h3>
+        <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">
+          Proper stocking ensures your fingerlings have enough space to grow, minimizes stress, and prevents disease outbreaks. Overcrowding is one of the main reasons for slow growth or high mortality.
+        </p>
+
+        <!-- Responsive Table -->
+        <div class="overflow-x-auto rounded-xl border border-gray-200 mb-8">
+          <table class="w-full min-w-[320px] sm:min-w-[520px] border-collapse text-gray-800">
+            <thead class="bg-primary text-white">
+              <tr>
+                <th class="p-3 sm:p-4 text-left text-sm sm:text-base">Pond / Tank Type</th>
+                <th class="p-3 sm:p-4 text-left text-sm sm:text-base">Suggested Fingerling Density</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y">
+              <tr><td class="p-3 sm:p-4">Concrete tank (10 × 10 ft)</td><td class="p-3 sm:p-4 font-bold text-accent">800–1,200 fingerlings</td></tr>
+              <tr class="bg-gray-50"><td class="p-3 sm:p-4">Earthen pond (300 m²)</td><td class="p-3 sm:p-4 font-bold text-accent">3,000–5,000 fingerlings</td></tr>
+              <tr><td class="p-3 sm:p-4">Tarpaulin tank (10,000 L)</td><td class="p-3 sm:p-4 font-bold text-accent">1,000–2,000 fingerlings</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Acclimatization Tips -->
+        <div class="bg-gray-50 rounded-2xl p-4 sm:p-6 border mb-8">
+          <h4 class="text-lg sm:text-xl font-bold mb-3">Acclimatization Tips (Never Skip)</h4>
+          <ul class="list-disc pl-5 sm:pl-6 space-y-2 text-gray-700 text-sm sm:text-base">
+            <li>Float transport bags on the pond surface for 10–15 minutes to match water temperatures.</li>
+            <li>Add small amounts of pond water to the bag every 5 minutes for 15–30 minutes to help fish adjust gradually.</li>
+            <li>Gently release fingerlings using a net; avoid pouring them directly to prevent stress and injuries.</li>
+            <li>Observe closely for the first hour — look for erratic swimming or lethargy.</li>
+          </ul>
+        </div>
+
+        <!-- Tip Box -->
+        <div class="bg-primary/5 rounded-2xl p-4 sm:p-6 border border-primary/10 mb-8">
+          <p class="text-base sm:text-lg">Tip: Always stock during cooler parts of the day, such as early morning or late afternoon, to reduce temperature shock.</p>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="mt-6 sm:mt-8">
+          <a href="https://wa.me/233555317397" class="inline-block bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold shadow-lg hover:bg-primary/90 transition text-sm sm:text-base">
+            Need help with stocking your pond? Chat with us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+     </article>
+
+     <!-- Step 4 -->
+     <article id="step-4" class="relative bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-12 border border-gray-100 overflow-hidden mt-12">
+          <div class="flex flex-col sm:flex-row gap-6 items-start">
+          
+          <!-- Step Circle -->
+          <div class="shrink-0 flex justify-center sm:block">
+               <div class="inline-flex items-center justify-center rounded-full bg-primary text-white font-bold w-16 h-16 text-2xl sm:text-3xl shadow-md">
+               4
+               </div>
+          </div>
+
+          <!-- Content -->
+          <div class="flex-1">
+               <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+               Feeding: Fingerlings → Grow-Out
+               </h3>
+               <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">
+               Feeding determines growth speed, body uniformity, survival rate, and overall profitability. Each growth stage requires a specific pellet size, protein level, and feeding frequency. Matching these correctly prevents wastage, boosts feed conversion ratio (FCR), and keeps fish healthy and active.
+               </p>
+
+               <!-- Feeding Grid -->
+               <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+               <!-- Fingerlings Card -->
+               <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+                    <h4 class="font-bold text-lg text-gray-900">Fingerlings (4–8 g)</h4>
+                    <p class="mt-2 text-sm sm:text-base text-gray-700 leading-relaxed">1.5–2 mm pellets • 3–4× daily • 45–50% protein</p>
+                    <ul class="mt-3 text-sm sm:text-base text-gray-700 space-y-1 leading-relaxed">
+                    <li>• Feed lightly but frequently</li>
+                    <li>• Avoid overfeeding to prevent ammonia buildup</li>
+                    <li>• Observe feeding response daily</li>
+                    <li>• Remove uneaten feed within 10–15 minutes</li>
+                    </ul>
+               </div>
+
+               <!-- Juveniles Card -->
+               <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+                    <h4 class="font-bold text-lg text-gray-900">Juveniles (10–50 g)</h4>
+                    <p class="mt-2 text-sm sm:text-base text-gray-700 leading-relaxed">2–4 mm pellets • 2–3× daily • 40–45% protein</p>
+                    <ul class="mt-3 text-sm sm:text-base text-gray-700 space-y-1 leading-relaxed">
+                    <li>• Transition steadily to larger pellets</li>
+                    <li>• Introduce floating pellets for better monitoring</li>
+                    <li>• Maintain consistent feeding times</li>
+                    <li>• Reduce feeding slightly during cold mornings</li>
+                    </ul>
+               </div>
+
+               <!-- Grow-Out Card -->
+               <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+                    <h4 class="font-bold text-lg text-gray-900">Grow-Out (100 g → 2 kg)</h4>
+                    <p class="mt-2 text-sm sm:text-base text-gray-700 leading-relaxed">4–6 mm pellets • 2× daily • 32–38% protein</p>
+                    <ul class="mt-3 text-sm sm:text-base text-gray-700 space-y-1 leading-relaxed">
+                    <li>• Feed early morning and late afternoon</li>
+                    <li>• Monitor growth every 2–4 weeks</li>
+                    <li>• Adjust feed quantity according to biomass</li>
+                    <li>• Avoid feeding during low-oxygen periods</li>
+                    </ul>
+               </div>
+               </div>
+
+               <!-- Pro Feeding Tips -->
+               <div class="mt-10 bg-primary/5 border border-primary/10 rounded-xl p-4 sm:p-6">
+               <h4 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Pro Feeding Tips for Maximum Growth</h4>
+               <ul class="space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base leading-relaxed">
+                    <li>• Always feed according to biomass — not guesswork.</li>
+                    <li>• Use high-quality feed; poor feed leads to slow growth and high FCR.</li>
+                    <li>• Keep a strict feeding timetable; fish perform best with routine.</li>
+                    <li>• Increase feed gradually as fish size increases.</li>
+                    <li>• Stop feeding when fish are stressed or during heavy rainfall.</li>
+               </ul>
+               </div>
+          </div>
+          </div>
+     </article>
+
+     <!-- Step 5 -->
+     <article id="step-5" class="relative bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-12 border border-gray-100 overflow-hidden mt-12">
+          <!-- Decorative Background -->
+          <div class="absolute -top-6 -right-6 w-28 h-28 bg-primary/10 rounded-full blur-2xl"></div>
+
+          <div class="flex flex-col sm:flex-row gap-6 items-start">
+          <!-- Step Badge -->
+          <div class="shrink-0 flex justify-center sm:block">
+               <div class="inline-flex items-center justify-center rounded-full bg-primary text-white font-bold w-16 h-16 text-2xl sm:text-3xl shadow-md">
+               5
+               </div>
+          </div>
+
+          <!-- Content -->
+          <div class="flex-1">
+               <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+               Water Management (MOST IMPORTANT)
+               </h3>
+               <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">
+               Stable and clean water is the backbone of healthy fish farming. Even if everything else is perfect, poor water quality can quickly lead to stress, disease, and mortality. Monitoring your pond daily is non-negotiable.
+               </p>
+
+               <!-- Daily & Weekly Tasks Grid -->
+               <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+               <!-- Tasks -->
+               <div>
+                    <h4 class="text-lg sm:text-xl font-semibold text-gray-900">Daily Tasks</h4>
+                    <ul class="mt-2 space-y-2 text-gray-700 text-sm sm:text-base leading-relaxed list-disc list-inside">
+                    <li>Change 10–20% of pond water, if feasible, to maintain cleanliness.</li>
+                    <li>Remove visible waste, debris, and uneaten feed to prevent ammonia build-up.</li>
+                    <li>Monitor water parameters: Dissolved Oxygen (DO > 5 mg/L), Temperature (26–30°C), pH (6.5–7.5).</li>
+                    <li>Observe fish behavior for early stress signs (e.g., erratic swimming or lethargy).</li>
+                    </ul>
+
+                    <h4 class="text-lg sm:text-xl font-semibold text-gray-900 mt-6">Weekly Tasks</h4>
+                    <ul class="mt-2 space-y-2 text-gray-700 text-sm sm:text-base leading-relaxed list-disc list-inside">
+                    <li>Change 40–60% of water if accumulation of waste is high.</li>
+                    <li>Scrub pond walls and siphon bottom sludge to prevent bacterial growth.</li>
+                    <li>Check and clean aerators, pumps, or filters for consistent oxygenation.</li>
+                    </ul>
+               </div>
+
+               <!-- Bad Water Signs -->
+               <div class="bg-danger/10 border border-danger/30 rounded-xl p-5 sm:p-6 text-gray-800">
+                    <h4 class="text-danger font-bold text-lg sm:text-xl mb-2">Warning: Bad Water Signs</h4>
+                    <ul class="space-y-2 text-sm sm:text-base list-disc list-inside">
+                    <li>Fish gasping or clustering at the water surface.</li>
+                    <li>Refusal to eat or decreased feeding activity.</li>
+                    <li>Water changes color, smells foul, or becomes cloudy.</li>
+                    <li>Sudden deaths without apparent cause.</li>
+                    <li>Algae blooms or excessive plant growth affecting oxygen levels.</li>
+                    </ul>
+                    <p class="mt-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Immediate action is required if any of these signs appear. Test water parameters and perform partial water changes or aeration adjustments to restore a healthy environment.
+                    </p>
+               </div>
+               </div>
+
+               <!-- Extra Tip -->
+               <div class="mt-8 bg-primary/5 border border-primary/10 rounded-xl p-4 sm:p-6 text-gray-800">
+               <p class="text-base sm:text-lg leading-relaxed">
+                    Tip: Regular water testing is better than reacting to problems. Consider using a simple water test kit daily to track oxygen, pH, and ammonia. Healthy water equals healthy fish, which equals better growth and higher survival rates.
+               </p>
+               </div>
+
+               <!-- CTA -->
+               <div class="mt-6 sm:mt-8">
+               <a href="https://wa.me/233555317397" target="_blank" class="inline-block bg-primary text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold shadow hover:bg-primary/90 transition text-sm sm:text-base">
+                    Need help managing your pond water? Chat with us on WhatsApp
+               </a>
+               </div>
+          </div>
+          </div>
+     </article>
+
+      <!-- Step 6 -->
+     <article id="step-6" class="relative bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-12 border border-gray-100 overflow-hidden mt-12">
+          <!-- Decorative Background -->
+          <div class="absolute -top-6 -right-6 w-28 sm:w-32 h-28 sm:h-32 bg-primary/10 rounded-full blur-2xl"></div>
+
+          <div class="flex flex-col sm:flex-row gap-6 items-start">
+          <!-- Step Badge -->
+          <div class="shrink-0 flex justify-center sm:block">
+               <div class="inline-flex items-center justify-center rounded-full bg-primary text-white font-bold w-16 h-16 text-2xl sm:text-3xl shadow-md">
+               6
+               </div>
+          </div>
+
+          <!-- Content -->
+          <div class="flex-1">
+               <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+               Grading (Size Sorting) – CRITICAL
+               </h3>
+               <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">
+               Fish grow at different rates. If you leave larger fish with smaller ones, they may eat the smaller fish or dominate access to food, causing stunted growth. Regular grading ensures a uniform population, healthier fish, and better overall yield.
+               </p>
+
+               <!-- Grading Schedule -->
+               <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 sm:p-6 mb-6">
+               <h4 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Recommended Grading Times</h4>
+               <ul class="space-y-2 text-gray-800 text-sm sm:text-base leading-relaxed list-disc list-inside">
+                    <li>Week 2 – first assessment after initial growth</li>
+                    <li>Week 4 – follow-up to catch faster growers</li>
+                    <li>Every 3–4 weeks thereafter – maintain uniform size groups</li>
+               </ul>
+               </div>
+
+               <!-- Why Grading Matters -->
+               <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 sm:p-6 mb-6">
+               <h4 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Why Grading is Critical</h4>
+               <ul class="space-y-2 text-gray-700 text-sm sm:text-base leading-relaxed list-disc list-inside">
+                    <li>Prevents cannibalism among fingerlings and juveniles.</li>
+                    <li>Reduces competition for feed, allowing each fish to grow optimally.</li>
+                    <li>Improves uniformity, making harvesting and sales easier.</li>
+                    <li>Minimizes stress caused by dominance hierarchies.</li>
+               </ul>
+               </div>
+
+               <!-- Practical Tips -->
+               <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 sm:p-6">
+               <h4 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Practical Tips for Grading</h4>
+               <ul class="space-y-2 text-gray-700 text-sm sm:text-base leading-relaxed list-disc list-inside">
+                    <li>Use a gentle net or grading tray — handle fish with care to avoid stress or injury.</li>
+                    <li>Sort into at least 3 size groups for better growth management.</li>
+                    <li>Grade in the morning or late afternoon when water temperature is cooler.</li>
+                    <li>After grading, observe fish closely for 24 hours to ensure no signs of stress or disease.</li>
+               </ul>
+               </div>
+
+               <!-- CTA -->
+               <div class="mt-6 sm:mt-8">
+               <a href="https://wa.me/233555317397" target="_blank" class="inline-block bg-primary text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold shadow hover:bg-primary/90 transition text-sm sm:text-base">
+                    Need help with grading? Chat with us on WhatsApp
+               </a>
+               </div>
+          </div>
+          </div>
+     </article>
+     
+      <!-- Step 7 -->
+     <article id="step-7" class="relative bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-12 border border-gray-100 overflow-hidden mt-12">
+          <!-- Decorative Background -->
+          <div class="absolute -top-8 -right-8 w-28 sm:w-32 h-28 sm:h-32 bg-red-100/20 rounded-full blur-2xl"></div>
+
+          <div class="flex flex-col sm:flex-row gap-6 items-start">
+          <!-- Step Badge -->
+          <div class="shrink-0 flex justify-center sm:block">
+               <div class="inline-flex items-center justify-center rounded-full  bg-primary text-white font-bold w-16 h-16 text-2xl sm:text-3xl shadow-md">
+               7
+               </div>
+          </div>
+
+          <!-- Content -->
+          <div class="flex-1">
+               <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+               Disease Prevention & Biosecurity
+               </h3>
+               <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">
+               Healthy fish are the foundation of a successful pond. Most losses are caused not by feed or growth, but by preventable diseases. Following proper biosecurity measures reduces the risk of infections, keeps your stock thriving, and ensures consistent yields.
+               </p>
+
+               <!-- Daily Biosecurity Routine -->
+               <div class="bg-red-50 border border-red-200 rounded-xl p-4 sm:p-6 mb-6">
+               <h4 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Daily Routine for Healthy Ponds</h4>
+               <ul class="space-y-2 text-gray-700 text-sm sm:text-base leading-relaxed list-disc list-inside">
+                    <li>Disinfect nets, buckets, and tools before and after use.</li>
+                    <li>Never mix fish from different sources to prevent disease spread.</li>
+                    <li>Quarantine new stock for 5–7 days before introducing to main pond.</li>
+                    <li>Cover ponds at night to protect from birds, frogs, and other predators.</li>
+                    <li>Avoid overfeeding to prevent water pollution and bacterial growth.</li>
+                    <li>Check fish behavior daily — lethargy or abnormal swimming is an early warning.</li>
+               </ul>
+               </div>
+
+               <!-- Common Diseases Table -->
+               <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 sm:p-6 mb-6">
+               <h4 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Common Diseases & Signs</h4>
+               <div class="overflow-x-auto">
+                    <table class="w-full border-collapse text-gray-700 text-sm sm:text-base">
+                    <thead>
+                    <tr class="bg-red-100 text-gray-900 font-semibold">
+                         <th class="p-3 sm:p-4 text-left">Disease</th>
+                         <th class="p-3 sm:p-4 text-left">Signs & Symptoms</th>
+                    </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                    <tr>
+                         <td class="p-3 sm:p-4">Ammonia Poisoning</td>
+                         <td class="p-3 sm:p-4">Red gills, gasping at surface, lethargy</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                         <td class="p-3 sm:p-4">Aeromonas Infection</td>
+                         <td class="p-3 sm:p-4">Wounds, fin rot, ulcers, slow growth</td>
+                    </tr>
+                    <tr>
+                         <td class="p-3 sm:p-4">Fungal Infection</td>
+                         <td class="p-3 sm:p-4">Cotton-like growth on skin or gills</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                         <td class="p-3 sm:p-4">Parasites</td>
+                         <td class="p-3 sm:p-4">Rubbing against surfaces, thin fish, erratic swimming</td>
+                    </tr>
+                    </tbody>
+                    </table>
+               </div>
+               </div>
+
+               <!-- Additional Biosecurity Tips -->
+               <div class="mt-6 bg-red-50 border border-red-200 rounded-xl p-4 sm:p-6">
+               <h4 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Extra Tips for Disease Prevention</h4>
+               <ul class="space-y-2 text-gray-700 text-sm sm:text-base leading-relaxed list-disc list-inside">
+                    <li>Use clean water sources and test regularly for contaminants.</li>
+                    <li>Maintain proper stocking density to reduce stress and disease susceptibility.</li>
+                    <li>Keep a log of pond treatments, feedings, and fish health checks.</li>
+                    <li>Consult a fish health expert immediately if unexplained deaths occur.</li>
+               </ul>
+               </div>
+
+               <!-- CTA -->
+               <div class="mt-6 sm:mt-8">
+               <a href="https://wa.me/233555317397" target="_blank" class="inline-block  bg-primary text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold shadow hover:bg-primary/90 transition text-sm sm:text-base">
+                    Need help preventing diseases? Chat with us on WhatsApp
+               </a>
+               </div>
+          </div>
+          </div>
+     </article>
+
+     <!-- Step 8 -->
+     <article id="step-8" class="relative bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-12 border border-gray-100 overflow-hidden mt-12">
+     <!-- Decorative Background -->
+     <div class="absolute -top-8 -right-8 w-28 sm:w-32 h-28 sm:h-32 bg-emerald-100/20 rounded-full blur-2xl"></div>
+
+     <div class="flex flex-col sm:flex-row gap-6 items-start">
+     <!-- Step Badge -->
+     <div class="shrink-0 flex justify-center sm:block">
+          <div class="inline-flex items-center justify-center rounded-full bg-emerald-600 text-white font-bold w-16 h-16 text-2xl sm:text-3xl shadow-md">
+          8
+          </div>
+     </div>
+
+     <!-- Content -->
+     <div class="flex-1">
+          <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Harvesting Guidelines
+          </h3>
+          <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">
+          Harvesting is the final and crucial stage of your fish farming cycle. Done correctly, it maximizes quality, minimizes stress, and ensures your fish taste fresh. Rushing this stage or ignoring key steps can result in losses or poor-quality fish.
+          </p>
+
+          <!-- Harvest Checklist -->
+          <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 sm:p-6 mb-6">
+          <h4 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">When to Harvest</h4>
+          <ul class="space-y-2 text-gray-700 text-sm sm:text-base list-disc list-inside leading-relaxed">
+               <li>Harvest at 4–6 months depending on feed quality, stocking density, and growth rate.</li>
+               <li>Check fish size and uniformity — harvest when most fish have reached marketable weight.</li>
+               <li>Stop feeding 24 hours prior to harvest to improve water quality and avoid muddy taste in flesh.</li>
+               <li>Harvest in the early morning or late evening when water temperature is cooler to reduce stress.</li>
+          </ul>
+          </div>
+
+          <!-- Additional Tips -->
+          <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 sm:p-6">
+          <h4 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Extra Tips for a Smooth Harvest</h4>
+          <ul class="space-y-2 text-gray-700 text-sm sm:text-base list-disc list-inside leading-relaxed">
+               <li>Use gentle nets and avoid overcrowding during capture to reduce injury.</li>
+               <li>Sort harvested fish by size if needed for market preferences.</li>
+               <li>Immediately transfer fish to clean containers with well-oxygenated water if not sold immediately.</li>
+               <li>Record harvest data (weight, size, number) for better management in the next cycle.</li>
+               <li>Clean and disinfect ponds after harvest to prepare for the next batch.</li>
+          </ul>
+          </div>
+
+          <!-- CTA -->
+          <div class="mt-6 sm:mt-8">
+          <a href="https://wa.me/233555317397" target="_blank" class="inline-block bg-emerald-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold shadow hover:bg-emerald-700 transition text-sm sm:text-base">
+               Need help with harvesting? Chat with us on WhatsApp
+          </a>
+          </div>
+     </div>
+     </div>
+     </article>
+
+     <!-- Step 9 -->
+     <article id="step-9" class="relative bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-12 border border-gray-100 overflow-hidden mt-12">
+          <!-- Decorative Background -->
+          <div class="absolute -top-10 -right-10 w-28 sm:w-32 h-28 sm:h-32 bg-gray-200/20 rounded-full blur-2xl"></div>
+
+          <div class="flex flex-col sm:flex-row gap-6 items-start">
+          <!-- Step Badge -->
+          <div class="shrink-0 flex justify-center sm:block">
+               <div class="inline-flex items-center justify-center rounded-full bg-primary text-white font-bold w-16 h-16 text-2xl sm:text-3xl shadow-md">
+               9
+               </div>
+          </div>
+
+          <!-- Content -->
+          <div class="flex-1">
+               <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+               DO’s and DON’Ts (Print & Pin This!)
+               </h3>
+               <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">
+               Keeping your fingerlings healthy requires attention to detail. Following the right habits while avoiding harmful practices can make the difference between a thriving pond and costly losses.
+               </p>
+
+               <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+               <!-- DO's -->
+               <div class="bg-green-50 border border-green-200 rounded-2xl p-4 sm:p-6">
+                    <h4 class="text-xl sm:text-2xl font-bold text-green-700 mb-3 sm:mb-4">DO’s (Always Do)</h4>
+                    <ul class="space-y-2 text-gray-800 text-sm sm:text-base list-disc list-inside leading-relaxed">
+                    <li>Maintain clean water daily and remove uneaten feed promptly.</li>
+                    <li>Use only floating pellets to monitor feeding and reduce waste.</li>
+                    <li>Grade fish regularly to prevent cannibalism and ensure uniform growth.</li>
+                    <li>Provide aeration consistently — oxygen is critical for survival.</li>
+                    <li>Observe fish behavior daily for signs of stress, disease, or abnormal swimming.</li>
+                    <li>Keep detailed farm records: feed, growth, water parameters, and mortality.</li>
+                    </ul>
+               </div>
+
+               <!-- DON'Ts -->
+               <div class="bg-red-50 border border-red-200 rounded-2xl p-4 sm:p-6">
+                    <h4 class="text-xl sm:text-2xl font-bold text-red-600 mb-3 sm:mb-4">DON’Ts (Never Do)</h4>
+                    <ul class="space-y-2 text-gray-800 text-sm sm:text-base list-disc list-inside leading-relaxed">
+                    <li>Do NOT overfeed — uneaten feed pollutes water and reduces oxygen.</li>
+                    <li>Do NOT dump feed in one spot — spread it evenly for all fish to access.</li>
+                    <li>Do NOT mix fingerlings from different farms — prevents disease transmission.</li>
+                    <li>Do NOT change 100% of water suddenly — acclimatize gradually.</li>
+                    <li>Do NOT use untreated tap water — chlorine or contaminants can be fatal.</li>
+                    <li>Do NOT skip acclimatization — sudden water changes shock fish.</li>
+                    <li>Do NOT allow predators — birds, frogs, and snakes can decimate stock quickly.</li>
+                    </ul>
+               </div>
+               </div>
+
+               <!-- CTA -->
+               <div class="mt-6 sm:mt-8">
+               <a href="https://wa.me/233555317397" target="_blank" class="inline-block bg-primary text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold shadow hover:bg-primary/90 transition text-sm sm:text-base">
+                    Questions? Chat with us on WhatsApp
+               </a>
+               </div>
+          </div>
+          </div>
+     </article>
+
+      <!-- Step 10 -->
+     <article id="step-10" class="relative bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-12 border border-gray-100 overflow-hidden mt-12">
+          <!-- Decorative Background -->
+          <div class="absolute -top-10 -right-10 w-28 sm:w-32 h-28 sm:h-32 bg-orange-200/20 rounded-full blur-2xl"></div>
+
+          <div class="flex flex-col gap-8">
+          <!-- Step Badge & Header -->
+          <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+               <div class="inline-flex items-center justify-center rounded-full bg-orange-500 text-white font-bold w-16 h-16 text-2xl sm:text-3xl shadow-md">
+               10
+               </div>
+               <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 text-center sm:text-left">
+               Biggest Mistakes Ghanaian Farmers Make (Avoid These!)
+               </h3>
+          </div>
+
+          <!-- Mistakes Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 sm:gap-6">
+               <!-- Repeat for all 10 mistakes -->
+               <div class="bg-white rounded-2xl p-4 sm:p-6 text-center shadow-lg">
+               <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-red-600 mb-2">1</p>
+               <p class="font-semibold text-sm sm:text-base">Overstocking</p>
+               </div>
+               <div class="bg-white rounded-2xl p-4 sm:p-6 text-center shadow-lg">
+               <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-red-600 mb-2">2</p>
+               <p class="font-semibold text-sm sm:text-base">Not Grading</p>
+               </div>
+               <div class="bg-white rounded-2xl p-4 sm:p-6 text-center shadow-lg">
+               <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-red-600 mb-2">3</p>
+               <p class="font-semibold text-sm sm:text-base">Poor Fingerlings</p>
+               </div>
+               <div class="bg-white rounded-2xl p-4 sm:p-6 text-center shadow-lg">
+               <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-red-600 mb-2">4</p>
+               <p class="font-semibold text-sm sm:text-base">Skipping Water Changes</p>
+               </div>
+               <div class="bg-white rounded-2xl p-4 sm:p-6 text-center shadow-lg">
+               <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-red-600 mb-2">5</p>
+               <p class="font-semibold text-sm sm:text-base">Cheap Feeds</p>
+               </div>
+               <div class="bg-white rounded-2xl p-4 sm:p-6 text-center shadow-lg">
+               <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-red-600 mb-2">6</p>
+               <p class="font-semibold text-sm sm:text-base">Irregular Feeding</p>
+               </div>
+               <div class="bg-white rounded-2xl p-4 sm:p-6 text-center shadow-lg">
+               <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-red-600 mb-2">7</p>
+               <p class="font-semibold text-sm sm:text-base">Ignoring Stress</p>
+               </div>
+               <div class="bg-white rounded-2xl p-4 sm:p-6 text-center shadow-lg">
+               <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-red-600 mb-2">8</p>
+               <p class="font-semibold text-sm sm:text-base">Untreated Water</p>
+               </div>
+               <div class="bg-white rounded-2xl p-4 sm:p-6 text-center shadow-lg">
+               <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-red-600 mb-2">9</p>
+               <p class="font-semibold text-sm sm:text-base">No Pond Cover</p>
+               </div>
+               <div class="bg-white rounded-2xl p-4 sm:p-6 text-center shadow-lg">
+               <p class="text-4xl sm:text-5xl lg:text-6xl font-black text-red-600 mb-2">10</p>
+               <p class="font-semibold text-sm sm:text-base">Poor Records</p>
+               </div>
+          </div>
+          </div>
+     </article>
+
+      <!-- Final CTA -->
+      <div class="bg-gradient-to-r from-primary to-emerald-700 text-white rounded-3xl p-12 text-center shadow-2xl mt-10">
+        <h3 class="text-4xl lg:text-5xl font-extrabold">Ready to Start Your Profitable Farm?</h3>
+        <p class="mt-4 text-xl opacity-90">Get premium fingerlings + lifetime expert support</p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-6 justify-center">
+          <a href="https://wa.me/233555317397" class="inline-flex items-center justify-center gap-3 bg-white text-primary font-bold text-xl py-5 px-10 rounded-xl hover:scale-105 transition">
+            <i class="fab fa-whatsapp text-2xl text-green-500"></i> Chat With Expert Now
+          </a>
+          <a href="contact.html" class="inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur border border-white/30 font-bold text-xl py-5 px-10 rounded-xl hover:bg-white/20 transition">
+            Request Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER - EXACT SAME AS YOUR SECOND PAGE -->
+  <footer class="bg-primary text-white py-12 mt-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+        <div>
+          <img src="assets/logo.png" alt="Logo" class="h-12 mx-auto md:mx-0 mb-4">
+          <p class="text-gray-300 text-sm">Premium fingerlings • Expert training • Nationwide delivery</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li><a href="pricing.html" class="hover:text-accent">Pricing</a></li>
+            <li><a href="training.html" class="hover:text-accent">Training</a></li>
+            <li><a href="gallery.html" class="hover:text-accent">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Contact</h3>
+          <p class="text-gray-300 text-sm">Medie Kotoku Road<br>Ghana</p>
+          <a href="https://wa.me/233555317397" class="mt-4 inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 px-5 py-3 rounded-lg text-sm font-bold">
+            <i class="fab fa-whatsapp"></i> +233 555 317 397
+          </a>
+        </div>
+      </div>
+      <div class="mt-10 pt-8 border-t border-emerald-800 text-center text-gray-400 text-sm">
+        © 2025 Triumph Farms & Consultation. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/233555317397" class="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white w-14 h-14 sm:w-16 sm:h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl sm:text-4xl z-40 transition hover:scale-110">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    // header menu open/close
+    const menuBtn = document.getElementById('menuBtn');
+    function openMenu(){
+      document.getElementById('mobileSidebar').classList.remove('-translate-x-full');
+      document.getElementById('menuOverlay').classList.remove('hidden');
+      document.getElementById('mobileSidebar').setAttribute('aria-hidden','false');
+      menuBtn?.setAttribute('aria-expanded','true');
+      // set focus for accessibility
+      const firstLink = document.querySelector('#mobileSidebar nav a');
+      if(firstLink) firstLink.focus();
+    }
+    function closeMenu(){
+      document.getElementById('mobileSidebar').classList.add('-translate-x-full');
+      document.getElementById('menuOverlay').classList.add('hidden');
+      document.getElementById('mobileSidebar').setAttribute('aria-hidden','true');
+      menuBtn?.setAttribute('aria-expanded','false');
+      menuBtn?.focus();
+    }
+
+    // set footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

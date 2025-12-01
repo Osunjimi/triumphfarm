@@ -23,8 +23,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="shortcut icon" href="assets//logo.png" type="image/x-icon">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <style>
-    body { overflow-x: hidden; font-family: 'Courier New', Courier, monospace; }
+    body { 
+      overflow-x: hidden; 
+      font-family: "Open Sans", sans-serif;
+    }
     .nav-link {
       position: relative;
       font-weight: 700;
@@ -106,31 +113,40 @@
   </header>
 
   <!-- HERO -->
-  <section class="relative min-h-screen flex items-center justify-center text-white text-center px-4 sm:px-6">
-    <img src="assets/contact-hero.jpg" alt="Fish Farm" class="absolute inset-0 w-full h-full object-cover brightness-50">
-    <div class="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary/90 to-emerald-900/95"></div>
-    
-    <div class="relative z-10 max-w-4xl mx-auto">
-      <div class="inline-flex items-center gap-3 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full text-lg font-bold mb-8">
-        <i class="fas fa-bolt text-yellow-400"></i>
-        Reply in <strong class="text-yellow-300">Under 8 Minutes</strong>
+  <section class="relative min-h-screen py-10 flex items-center justify-center overflow-hidden">
+
+    <!-- BACKGROUND IMAGE 1 -->
+    <div class="absolute inset-0 -z-20">
+      <img src="assets/fishes.jpg" alt="Catfish"
+          class="w-full h-full object-cover brightness-75">
+    </div>
+
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/80 to-emerald-900/80 -z-0"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto text-center">
+      
+      <div class="inline-flex text-accent items-center gap-3 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full text-lg font-bold mb-8">
+        <i class="fas fa-bolt text-white"></i>
+        Reply in <strong class="text-white">Under 8 Minutes</strong>
       </div>
 
-      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight">
+      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight text-white">
         Your Farm<br><span class="text-accent">Starts Here</span>
       </h1>
 
-      <p class="mt-8 text-lg sm:text-xl md:text-2xl font-medium max-w-2xl mx-auto opacity-95">
+      <p class="mt-8 text-lg sm:text-xl md:text-2xl font-medium max-w-2xl mx-auto opacity-95 text-white">
         One message = thousands of fingerlings = millions in profit
       </p>
 
       <a href="https://wa.me/233555317397" target="_blank"
-         class="mt-12 inline-flex items-center gap-4 bg-white text-primary font-black text-xl sm:text-2xl py-6 px-10 sm:px-16 rounded-3xl shadow-2xl hover:shadow-3xl transition-all hover:scale-105">
+        class="mt-12 inline-flex items-center gap-4 bg-white text-primary font-black text-xl sm:text-2xl py-6 px-10 sm:px-16 rounded-3xl shadow-2xl hover:shadow-3xl transition-all hover:scale-105">
         <i class="fab fa-whatsapp text-5xl sm:text-6xl text-green-500"></i>
         Chat Now — Instant Reply
       </a>
+
     </div>
   </section>
+
 
   <!-- CONTACT SECTION - FULLY RESPONSIVE -->
   <section class="py-16 lg:py-24 bg-gray-50">
@@ -183,7 +199,7 @@
 
           <button type="submit"
                   class="w-full bg-gradient-to-r from-accent to-emerald-600 text-white font-black text-xl py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all hover:scale-105">
-            Send Message — Reply in Minutes
+            Send Message
           </button>
         </form>
       </div>
@@ -249,22 +265,23 @@
     </div>
   </section>
 
-  <!-- FINAL CTA -->
-  <section class="py-20 lg:py-28 bg-gradient-to-r from-primary to-emerald-700 text-white text-center">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-4xl sm:text-5xl lg:text-7xl font-black mb-6">
-        Don’t Wait.<br><span class="text-accent">Message Us Now</span>
-      </h2>
-      <p class="text-xl sm:text-2xl mb-10 opacity-90">
-        Your profitable fish farm starts with one chat
-      </p>
-      <a href="https://wa.me/233555317397" target="_blank"
-         class="inline-flex items-center gap-5 bg-white text-primary font-black text-2xl py-8 px-16 rounded-3xl shadow-2xl hover:scale-110 transition">
-        <i class="fab fa-whatsapp text-6xl text-green-500"></i>
-        Start Chat Now
-      </a>
-    </div>
-  </section>
+<!-- FINAL CTA -->
+<section class="py-20 lg:py-28 bg-white text-gray-900 text-center">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-4xl sm:text-5xl lg:text-7xl font-black mb-6">
+      Don’t Wait.<br><span class="text-accent">Message Us Now</span>
+    </h2>
+    <p class="text-xl sm:text-2xl mb-10 opacity-90">
+      Your profitable fish farm starts with one chat
+    </p>
+    <a href="https://wa.me/233555317397" target="_blank"
+       class="inline-flex items-center gap-5 bg-primary text-white font-black text-2xl py-8 px-16 rounded-3xl shadow-2xl hover:bg-primary/80 transition transform hover:scale-110">
+      <i class="fab fa-whatsapp text-6xl text-green-500"></i>
+      Start Chat Now
+    </a>
+  </div>
+</section>
+
 
   <!-- FOOTER - Fully Responsive -->
   <footer class="bg-primary text-white py-12">

@@ -28,30 +28,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <style>
     body{
-      /* font-family: 'Courier New', Courier, monospace; */
      font-family: "Open Sans", sans-serif;;
     }
     .nav-link {
       position: relative;
+      font-weight: 700;
       transition: color 0.3s;
     }
     .nav-link::after {
       content: '';
       position: absolute;
       width: 0;
-      height: 3px;
+      height: 4px;
       bottom: -8px;
-      left: 0;
-      background-color: #10B981;
-      transition: width 0.4s ease;
+      left: 50%;
+      background: #10B981;
+      transition: all 0.4s;
+      transform: translateX(-50%);
+      border-radius: 2px;
     }
     .nav-link:hover::after,
-    .nav-link.active::after {
-      width: 100%;
+    .nav-link.active::after { 
+      width: 100%; 
     }
-    .nav-link.active {
-      color: #10B981;
-      font-weight: 700;
+    .nav-link.active { 
+      color: #10B981; 
     }
     /* Prevent any overflow */
     *, *::before, *::after { box-sizing: border-box; }
@@ -76,7 +77,7 @@
       <a href="services.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Services</a>
       <a href="pricing.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Pricing</a>
       <a href="training.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Training</a>
-      <a href="blog.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Blog</a>
+      <!-- <a href="blog.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Blog</a> -->
       <a href="gallery.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Gallery</a>
       <a href="contact.html" class="block py-4 px-8 hover:bg-emerald-800 transition font-bold">Contact</a>
     </nav>
@@ -96,7 +97,7 @@
         <a href="services.html" class="nav-link">Services</a>
         <a href="pricing.html" class="nav-link">Pricing</a>
         <a href="training.html" class="nav-link">Training</a>
-        <a href="blog.html" class="nav-link">Blog</a>
+        <!-- <a href="blog.html" class="nav-link">Blog</a> -->
         <a href="gallery.html" class="nav-link">Gallery</a>
         <a href="contact.html" class="nav-link text-accent font-bold">Contact</a>
       </nav>

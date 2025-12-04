@@ -113,10 +113,10 @@
   </header>
 
   <!-- HERO - Perfect on mobile -->
-  <section class="relative min-h-screen flex items-center justify-center text-white">
+  <section class="relative min-h-[70vh] flex items-center justify-center text-white">
     <div class="absolute inset-0">
       <img src="assets/fishes.jpg" alt="Training" class="w-full h-full object-cover brightness-50">
-      <div class="absolute inset-0 bg-primary/90"></div>
+      <div class="absolute inset-0 bg-primary/80"></div>
     </div>
     <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
       <p class="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-5 py-3 rounded-full text-sm sm:text-lg font-medium mb-6">
@@ -294,17 +294,19 @@
   </div>
 </section>
 
-  <!-- FOOTER -->
-   <footer class="bg-primary text-white py-16">
+   <!-- FOOTER  -->
+  <footer class="bg-primary text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 text-center md:text-left">
         <div>
-          <img src="assets/logo.png" alt="Triumph Farms" class="h-14 mb-6">
+          <img src="assets/logo.png" alt="Triumph Farms" 
+              class="h-14 mb-6 mx-auto md:mx-0">
+
           <p class="text-gray-300 leading-relaxed">
             Your trusted partner in profitable catfish farming across Ghana.<br>
             Premium fingerlings • Expert training • Nationwide delivery
           </p>
-          <div class="mt-6 flex gap-4">
+          <div class="mt-6 flex gap-4 justify-center md:justify-start">
             <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition">
               <i class="fab fa-facebook-f"></i>
             </a>
@@ -316,18 +318,15 @@
             </a>
           </div>
         </div>
-
         <div>
           <h3 class="text-xl font-bold mb-6">Quick Links</h3>
           <ul class="space-y-4 text-gray-300">
             <li><a href="services.html" class="hover:text-accent transition">Services</a></li>
             <li><a href="pricing.html" class="hover:text-accent transition">Pricing</a></li>
-            <li><a href="training.html" class="hover:text-accent transition">Traning</a></li>
-            <li><a href="blog.html" class="hover:text-accent transition">Blog</a></li>
+            <li><a href="training.html" class="hover:text-accent transition">Training</a></li>
             <li><a href="gallery.html" class="hover:text-accent transition">Gallery</a></li>
           </ul>
         </div>
-
         <div>
           <h3 class="text-xl font-bold mb-6">Visit Us</h3>
           <p class="text-gray-300 leading-relaxed">
@@ -335,32 +334,38 @@
             <em>Search "M & D Medical Center Kotoku Road" on Google Maps</em>
           </p>
           <p class="mt-6">
-            <a href="https://wa.me/233555317397" class="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold transition">
+            <a href="https://wa.me/233555317397" 
+              class="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold transition">
               <i class="fab fa-whatsapp"></i> +233 555 317 397
             </a>
           </p>
         </div>
       </div>
-      <div class="mt-16 pt-8 border-t border-emerald-800 text-center text-gray-400">
-    <p>© 2025 Triumph Farms & Consultation. All rights reserved. | Premium Catfish Farming in Ghana</p>
-
-      <div class="mt-4">
-        Designed by
-        <a 
-          href="https://personal-portfolio-osunjimi-ibrahims-projects.vercel.app/" 
-          target="_blank" 
-          class="text-gray-300 hover:text-accent font-semibold transition"
-        >
-          Ibrahim
-        </a>
+      <div class="mt-16 pt-8 border-t border-emerald-800 text-gray-400">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 text-center md:text-left">
+          <div class="flex items-center gap-6 text-sm justify-center md:justify-start">
+            <a href="./policy.html" class="hover:text-accent transition">Privacy Policy</a>
+            <a href="./terms.html" class="hover:text-accent transition">Terms & Conditions</a>
+          </div>
+          <p class="text-sm">
+            © 2025 Triumph Farms & Consultation. All rights reserved.
+          </p>
+          <div class="text-sm">
+            Designed by 
+            <a 
+              href="https://personal-portfolio-osunjimi-ibrahims-projects.vercel.app/"
+              target="_blank"
+              class="text-gray-300 hover:text-accent font-semibold transition"
+            >
+              Ibrahim
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-
     </div>
   </footer>
 
 
-  <!-- Floating WhatsApp -->
   <a href="https://wa.me/233555317397" target="_blank" class="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white w-14 h-14 sm:w-16 sm:h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl sm:text-4xl z-40 transition hover:scale-110">
     <i class="fab fa-whatsapp"></i>
   </a>

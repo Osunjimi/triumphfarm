@@ -1,61 +1,235 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Triumph Farms & Consultation – Aquaculture services, training, fish farming guides, consultation and farm development solutions in Ghana.">
-<meta name="keywords" content="fish farming, aquaculture, consultation, triumph farms, fingerlings, pond construction">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy | Triumph Farms Ghana</title>
+  <meta name="description" content="How we and our advertising partners (like Google AdSense) collect and use your data."/>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1322505681860168" crossorigin="anonymous"></script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V879QH9CN5"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V879QH9CN5');</script>
-<!-- AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1322505681860168" crossorigin="anonymous"></script>
-<!-- reCAPTCHA v3 -->
-<script src="https://www.google.com/recaptcha/api.js?render=6Lf54hksAAAAAEaV2twH3OBFB_BZDG2ZBqMG76Bh"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { primary: '#0F4C3A', accent: '#10B981' } } } }
+  </script>
 
-<title>Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="shortcut icon" href="assets//logo.png" type="image/x-icon">
+
+
+  <style>
+    body { font-family: "Open Sans", sans-serif; }
+    .nav-link {
+      position: relative; font-weight: 700; transition: color 0.3s;
+    }
+    .nav-link::after {
+      content: ''; position: absolute; width: 0; height: 4px; bottom: -8px; left: 50%;
+      background: #10B981; transition: all 0.4s; transform: translateX(-50%); border-radius: 2px;
+    }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+    .nav-link.active { color: #10B981; }
+  </style>
 </head>
-<body style="font-family:Arial,Helvetica,sans-serif;margin:0;padding:0;">
-<div id="sidebar" style="position:fixed;left:0;top:0;width:250px;height:100%;background:#111;padding-top:60px;transform:translateX(-250px);transition:0.3s;z-index:9999;">
-<a href="index.html" style="color:white;padding:10px;display:block;">Home</a>
-<a href="about.html" style="color:white;padding:10px;display:block;">About</a>
-<a href="services.html" style="color:white;padding:10px;display:block;">Services</a>
-<a href="pricing.html" style="color:white;padding:10px;display:block;">Pricing</a>
-<a href="training.html" style="color:white;padding:10px;display:block;">Training</a>
-<a href="blog.html" style="color:white;padding:10px;display:block;">Blog</a>
-<a href="gallery.html" style="color:white;padding:10px;display:block;">Gallery</a>
-<a href="contact.html" style="color:white;padding:10px;display:block;">Contact</a>
-</div>
-<div id="menuBtn" onclick="document.getElementById('sidebar').style.transform='translateX(0)'" 
-     style="position:fixed;top:20px;left:20px;font-size:30px;cursor:pointer;z-index:10000;color:#000;">☰
-</div>
-<div id="closeBtn" onclick="document.getElementById('sidebar').style.transform='translateX(-250px)'" 
-     style="position:fixed;top:20px;left:60px;font-size:30px;cursor:pointer;z-index:10000;color:#000;">✕
-</div>
+
+<body class="bg-white text-gray-800 antialiased overflow-x-hidden">
+
+  <!-- Mobile Menu Overlay & Sidebar -->
+  <div id="menuOverlay" HIDDEN class="fixed inset-0 bg-black bg-opacity-70 z-40 hidden" onclick="closeMenu()"></div>
+  <aside id="mobileSidebar" class="fixed top-0 left-0 h-screen w-80 max-w-[90vw] bg-primary text-white transform -translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
+    <div class="flex items-center justify-between p-6 border-b border-emerald-800">
+      <img src="assets/logo.png" alt="Triumph Farms" class="h-12">
+      <button onclick="closeMenu()" class="text-3xl hover:text-accent"><i class="fas fa-times"></i></button>
+    </div>
+    <nav class="mt-6 text-lg font-medium">
+      <a href="index.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Home</a>
+      <a href="services.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Services</a>
+      <a href="pricing.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Pricing</a>
+      <a href="training.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Training</a>
+      <a href="gallery.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Gallery</a>
+      <a href="contact.html" class="block py-4 px-8 hover:bg-emerald-800 transition font-bold">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Header -->
+  <header class="sticky top-0 bg-white/95 backdrop-blur-sm shadow-lg z-30 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <button onclick="openMenu()" class="lg:hidden text-3xl text-primary hover:text-accent"><i class="fas fa-bars"></i></button>
+      <a href="index.html"><img src="assets/logo.png" alt="Triumph Farms" class="h-12 sm:h-14"></a>
+      <nav class="hidden lg:flex items-center space-x-8 xl:space-x-10 text-lg font-semibold">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="training.html" class="nav-link">Training</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link text-accent font-bold">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+    <section class="relative min-h-[50vh] py-10 flex items-center justify-center overflow-hidden">
+
+    <div class="absolute inset-0 -z-20">
+      <img src="assets/fishes.jpg" alt="Catfish"
+          class="w-full h-full object-cover brightness-50">
+    </div>
+
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/80 to-emerald-900/80 -z-10"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6">
+        Privacy Policy
+      </h1>
+      <p class="text-2xl opacity-90">
+        Last updated: December 04, 2025
+      </p>
+    </div>
+
+  </section>
 
 
-<nav style="padding:12px;background:#f2f2f2;">
-  <a href="index.html">Home</a> |
-  <a href="about.html">About</a> |
-  <a href="services.html">Services</a> |
-  <a href="consultation.html">Consultation Booking</a> |
-  <a href="gallery.html">Gallery</a> |
-  <a href="blog.html">Blog</a> |
-  <a href="shop.html">Shop</a> |
-  <a href="contact.html">Contact</a>
-</nav>
+  <!-- Main Content -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="bg-white rounded-3xl shadow-2xl p-10 lg:p-16 space-y-12">
 
-<main style="padding:20px;max-width:900px;margin:auto;">
-<h1>Policy</h1>
-<p>General policy page (duplicate of privacy).</p>
-</main>
+        <div>
+          <h2 class="text-3xl font-bold text-primary mb-6">1. Information We Collect</h2>
+          <ul class="list-disc pl-8 space-y-4 text-lg">
+            <li><strong>Your name & phone number</strong> – when you message us on WhatsApp or fill a form</li>
+            <li><strong>Email & location</strong> – if you provide them</li>
+            <li><strong>Ad-related data</strong> – Google AdSense and partners place cookies and collect browsing data to show you relevant ads</li>
+          </ul>
+        </div>
 
-<footer style="padding:20px;text-align:center;font-size:14px;color:#444;">
-  &copy; 2025 Triumph Farms & Consultation — All rights reserved. | <a href="privacy.html">Privacy Policy</a>
-</footer>
+        <div class="bg-blue-50 border-2 border-blue-300 rounded-xl p-6">
+          <p class="font-bold text-lg">We display advertisements from Google AdSense and similar networks. These ads use cookies to show you products related to farming, feeds, equipment, etc.</p>
+        </div>
 
+        <div>
+          <h2 class="text-3xl font-bold text-primary mb-6">2. Third-Party Advertising (Google AdSense & Others)</h2>
+          <ul class="list-disc pl-8 space-y-4 text-lg">
+            <li>We use Google AdSense to display ads on our website</li>
+            <li>Google and its partners use cookies to serve ads based on your visits to this site and other websites</li>
+            <li>They may collect: IP address, browser type, pages viewed, time spent, and ad clicks</li>
+            <li>You can opt out at <a href="https://www.google.com/settings/ads" target="_blank" class="text-accent underline">google.com/settings/ads</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-3xl font-bold text-primary mb-6">3. How We Use Your Personal Info</h2>
+          <ul class="list-disc pl-8 space-y-4 text-lg">
+            <li>Reply to your WhatsApp messages</li>
+            <li>Send delivery updates and price lists</li>
+            <li>Provide customer support</li>
+            <li class="text-red-600 font-bold">We NEVER sell your phone number or personal details</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-3xl font-bold text-primary mb-6">4. Your Rights</h2>
+          <ul class="list-disc pl-8 space-y-4 text-lg">
+            <li>Type “Delete my data” on WhatsApp → we delete everything</li>
+            <li>Type “STOP” → we stop messaging you</li>
+            <li>Control ad cookies via the links above</li>
+          </ul>
+        </div>
+
+        <div class="bg-green-50 border-2 border-green-300 rounded-xl p-6 text-center">
+          <p class="text-2xl font-bold text-primary">Contact us anytime:</p>
+          <a href="https://wa.me/233555317397" class="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl mt-4 text-xl">
+            <i class="fab fa-whatsapp"></i> +233 555 317 397
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+    <!-- FOOTER  -->
+  <footer class="bg-primary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 text-center md:text-left">
+        <div>
+          <img src="assets/logo.png" alt="Triumph Farms" 
+              class="h-14 mb-6 mx-auto md:mx-0">
+
+          <p class="text-gray-300 leading-relaxed">
+            Your trusted partner in profitable catfish farming across Ghana.<br>
+            Premium fingerlings • Expert training • Nationwide delivery
+          </p>
+          <div class="mt-6 flex gap-4 justify-center md:justify-start">
+            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/233555317397" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-500 transition">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+          <ul class="space-y-4 text-gray-300">
+            <li><a href="services.html" class="hover:text-accent transition">Services</a></li>
+            <li><a href="pricing.html" class="hover:text-accent transition">Pricing</a></li>
+            <li><a href="training.html" class="hover:text-accent transition">Training</a></li>
+            <li><a href="gallery.html" class="hover:text-accent transition">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-6">Visit Us</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Medie Kotoku Road<br>
+            <em>Search "M & D Medical Center Kotoku Road" on Google Maps</em>
+          </p>
+          <p class="mt-6">
+            <a href="https://wa.me/233555317397" 
+              class="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold transition">
+              <i class="fab fa-whatsapp"></i> +233 555 317 397
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="mt-16 pt-8 border-t border-emerald-800 text-gray-400">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 text-center md:text-left">
+          <div class="flex items-center gap-6 text-sm justify-center md:justify-start">
+            <a href="./policy.html" class="hover:text-accent transition">Privacy Policy</a>
+            <a href="./terms.html" class="hover:text-accent transition">Terms & Conditions</a>
+          </div>
+          <p class="text-sm">
+            © 2025 Triumph Farms & Consultation. All rights reserved.
+          </p>
+          <div class="text-sm">
+            Designed by 
+            <a 
+              href="https://personal-portfolio-osunjimi-ibrahims-projects.vercel.app/"
+              target="_blank"
+              class="text-gray-300 hover:text-accent font-semibold transition"
+            >
+              Ibrahim
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/233555317397" class="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-4xl z-40 transition hover:scale-110">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    function openMenu() { document.getElementById('mobileSidebar').classList.remove('-translate-x-full'); document.getElementById('menuOverlay').classList.remove('hidden'); }
+    function closeMenu() { document.getElementById('mobileSidebar').classList.add('-translate-x-full'); document.getElementById('menuOverlay').classList.add('hidden'); }
+    // Auto active link
+    document.addEventListener('DOMContentLoaded', () => {
+      const path = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-link').forEach(l => { if (l.getAttribute('href') === path) l.classList.add('active'); });
+    });
+  </script>
 </body>
 </html>

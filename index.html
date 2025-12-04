@@ -104,7 +104,7 @@
     </div>
   </header>
 
-  <!-- Hero Section (same stunning one) -->
+  <!-- Hero Section  -->
   <section class="relative min-h-screen py-10 flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0">
       <img src="assets/fishes.jpg" alt="Catfish" class="w-full h-full object-cover brightness-50">
@@ -156,8 +156,6 @@
     </div>
   </section>
 
-  <!-- Services, Pricing, Gallery, Testimonials (perfectly responsive) -->
-  <!-- Keeping them clean and fitted -->
 
   <section class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -169,7 +167,6 @@
           <h3 class="text-2xl font-bold mb-4">Fingerlings Supply</h3>
           <p class="text-gray-600">Healthy, graded, pellet-trained</p>
         </div>
-        <!-- Repeat for others... -->
         <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition text-center">
           <div class="w-20 h-20 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-6 text-3xl font-bold">2</div>
           <h3 class="text-2xl font-bold mb-4">Farm Setup</h3>
@@ -199,7 +196,6 @@
           <p class="text-4xl font-extrabold mt-3">₵1.00</p>
           <p class="text-xs opacity-90">per fish</p>
         </div>
-        <!-- Repeat others with same classes -->
         <div class="bg-gray-100 p-6 rounded-2xl shadow-xl text-center hover:shadow-2xl transition">
           <h3 class="text-lg font-bold text-gray-800">Post Fingerlings</h3>
           <p class="text-4xl font-extrabold text-primary mt-3">₵1.20</p>
@@ -224,17 +220,19 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+   <!-- FOOTER  -->
   <footer class="bg-primary text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 text-center md:text-left">
         <div>
-          <img src="assets/logo.png" alt="Triumph Farms" class="h-14 mb-6">
+          <img src="assets/logo.png" alt="Triumph Farms" 
+              class="h-14 mb-6 mx-auto md:mx-0">
+
           <p class="text-gray-300 leading-relaxed">
             Your trusted partner in profitable catfish farming across Ghana.<br>
             Premium fingerlings • Expert training • Nationwide delivery
           </p>
-          <div class="mt-6 flex gap-4">
+          <div class="mt-6 flex gap-4 justify-center md:justify-start">
             <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition">
               <i class="fab fa-facebook-f"></i>
             </a>
@@ -246,18 +244,15 @@
             </a>
           </div>
         </div>
-
         <div>
           <h3 class="text-xl font-bold mb-6">Quick Links</h3>
           <ul class="space-y-4 text-gray-300">
             <li><a href="services.html" class="hover:text-accent transition">Services</a></li>
             <li><a href="pricing.html" class="hover:text-accent transition">Pricing</a></li>
-            <li><a href="training.html" class="hover:text-accent transition">Traning</a></li>
-            <li><a href="blog.html" class="hover:text-accent transition">Blog</a></li>
+            <li><a href="training.html" class="hover:text-accent transition">Training</a></li>
             <li><a href="gallery.html" class="hover:text-accent transition">Gallery</a></li>
           </ul>
         </div>
-
         <div>
           <h3 class="text-xl font-bold mb-6">Visit Us</h3>
           <p class="text-gray-300 leading-relaxed">
@@ -265,30 +260,36 @@
             <em>Search "M & D Medical Center Kotoku Road" on Google Maps</em>
           </p>
           <p class="mt-6">
-            <a href="https://wa.me/233555317397" class="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold transition">
+            <a href="https://wa.me/233555317397" 
+              class="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold transition">
               <i class="fab fa-whatsapp"></i> +233 555 317 397
             </a>
           </p>
         </div>
       </div>
-      <div class="mt-16 pt-8 border-t border-emerald-800 text-center text-gray-400">
-    <p>© 2025 Triumph Farms & Consultation. All rights reserved. | Premium Catfish Farming in Ghana</p>
-
-      <div class="mt-4">
-        Designed by
-        <a 
-          href="https://personal-portfolio-osunjimi-ibrahims-projects.vercel.app/" 
-          target="_blank" 
-          class="text-gray-300 hover:text-accent font-semibold transition"
-        >
-          Ibrahim
-        </a>
+      <div class="mt-16 pt-8 border-t border-emerald-800 text-gray-400">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 text-center md:text-left">
+          <div class="flex items-center gap-6 text-sm justify-center md:justify-start">
+            <a href="./policy.html" class="hover:text-accent transition">Privacy Policy</a>
+            <a href="./terms.html" class="hover:text-accent transition">Terms & Conditions</a>
+          </div>
+          <p class="text-sm">
+            © 2025 Triumph Farms & Consultation. All rights reserved.
+          </p>
+          <div class="text-sm">
+            Designed by 
+            <a 
+              href="https://personal-portfolio-osunjimi-ibrahims-projects.vercel.app/"
+              target="_blank"
+              class="text-gray-300 hover:text-accent font-semibold transition"
+            >
+              Ibrahim
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-
-    </div>
   </footer>
-
   <!-- Floating WhatsApp -->
   <a href="https://wa.me/233555317397" target="_blank" class="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-4xl z-40 transition hover:scale-110">
     <i class="fab fa-whatsapp"></i>

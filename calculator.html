@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quick Feed Calculator - Triumph Farms & Consultation</title>
+  <meta name="description" content="Free Catfish Feed Calculator: Enter fish weight & quantity to instantly know daily feed amount, feed size & stage."/>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0F4C3A',
+            accent: '#10B981',
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: "Open Sans", sans-serif; }
+    .nav-link {
+      position: relative;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 4px;
+      bottom: -8px;
+      left: 50%;
+      background: #10B981;
+      transition: all 0.4s;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after { width: 100%; }
+    .nav-link.active { color: #10B981; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800 antialiased overflow-x-hidden">
+
+  <!-- Mobile Menu Overlay -->
+  <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-70 z-40 hidden" onclick="closeMenu()"></div>
+
+  <!-- Mobile Sidebar -->
+  <aside id="mobileSidebar" class="fixed top-0 left-0 h-screen w-80 max-w-[90vw] bg-primary text-white transform -translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
+    <div class="flex items-center justify-between p-6 border-b border-emerald-800">
+      <img src="assets/logo.png" alt="Triumph Farms" class="h-12">
+      <button onclick="closeMenu()" class="text-3xl hover:text-accent transition">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <nav class="mt-6 text-lg font-medium">
+      <a href="index.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Home</a>
+      <a href="services.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Services</a>
+      <a href="pricing.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Pricing</a>
+      <a href="training.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Training</a>
+      <a href="gallery.html" class="block py-4 px-8 hover:bg-emerald-800 transition">Gallery</a>
+      <a href="calculator.html" class="block py-4 px-8 bg-emerald-800">Feed Calculator</a>
+      <a href="contact.html" class="block py-4 px-8 hover:bg-emerald-800 transition font-bold">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Header -->
+  <header class="sticky top-0 bg-white/95 backdrop-blur-sm shadow-lg z-30 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <button onclick="openMenu()" class="lg:hidden text-3xl text-primary hover:text-accent">
+        <i class="fas fa-bars"></i>
+      </button>
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Triumph Farms" class="h-12 sm:h-14">
+      </a>
+      <nav class="hidden lg:flex items-center space-x-8 xl:space-x-10 text-lg font-semibold">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="training.html" class="nav-link">Training</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="calculator.html" class="nav-link">Feed Calculator</a>
+        <a href="contact.html" class="nav-link text-accent font-bold">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+<section class="relative min-h-[40vh] flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0">
+    <img 
+      src="assets/fishes.jpg" 
+      alt="Catfish"
+      class="w-full h-full object-cover brightness-50"
+    >
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-emerald-900/70"></div>
+  </div>
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+      Quick Catfish Feed Calculator
+    </h1>
+    <p class="mt-6 text-lg sm:text-xl md:text-2xl opacity-95">
+      Stop guessing! Enter your fish weight & total number → get exact daily feed quantity, correct pellet size & growth stage instantly.
+    </p>
+  </div>
+</section>
+
+
+  <!-- Calculator Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+        <form id="feedCalculator" class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+          <div>
+            <label class="block text-lg font-semibold mb-3">Average Weight per Fish (grams)</label>
+            <input type="number" id="fishWeight" min="10" step="10" placeholder="e.g. 150" class="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:border-accent focus:outline-none text-lg" required>
+          </div>
+          <div>
+            <label class="block text-lg font-semibold mb-3">Total Number of Fish</label>
+            <input type="number" id="totalFish" min="1" placeholder="e.g. 1500" class="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:border-accent focus:outline-none text-lg" required>
+          </div>
+          <div class="md:col-span-2">
+            <button type="submit" class="w-full bg-accent hover:bg-emerald-600 text-white font-bold py-5 rounded-xl text-xl transition transform hover:scale-105 shadow-xl">
+              Calculate My Daily Feed
+            </button>
+          </div>
+        </form>
+
+        <!-- Result Box -->
+        <div id="result" class="hidden bg-gradient-to-r from-accent to-emerald-600 text-white p-10 rounded-2xl">
+          <h2 class="text-3xl font-bold mb-8 text-center">Your Daily Feeding Recommendation</h2>
+          <ul id="feedDetails" class="space-y-5 text-lg"></ul>
+          <p class="mt-8 text-center italic opacity-90">
+            Feed 2–3 times daily • Adjust based on water quality & fish appetite<br>
+            Need personalized advice? WhatsApp us now!
+          </p>
+        </div>
+      </div>
+
+      <!-- Reference Table -->
+      <div class="mt-16 bg-white rounded-3xl shadow-xl overflow-hidden">
+        <div class="bg-primary text-white p-6 text-center">
+          <h2 class="text-2xl font-bold">Standard Feeding Chart (for 1,000 fish)</h2>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left">
+            <thead class="bg-gray-100 text-gray-700 uppercase text-sm">
+              <tr>
+                <th class="px-6 py-4">Weight (g)</th>
+                <th class="px-6 py-4">% of Body Weight</th>
+                <th class="px-6 py-4">Daily Feed (g)</th>
+                <th class="px-6 py-4">Feed Size</th>
+                <th class="px-6 py-4">Period</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700">
+              <tr class="border-b"><td class="px-6 py-4">10</td><td>3.0%</td><td>300g</td><td>2mm</td><td>Week 1–2</td></tr>
+              <tr class="border-b"><td class="px-6 py-4">50</td><td>3.0%</td><td>1.5kg</td><td>2mm</td><td>Week 3–4</td></tr>
+              <tr class="border-b"><td class="px-6 py-4">100</td><td>3.0%</td><td>3kg</td><td>3mm</td><td>Week 5–6</td></tr>
+              <tr class="border-b"><td class="px-6 py-4">200</td><td>2.2%</td><td>4.4kg</td><td>3mm</td><td>Week 7–8</td></tr>
+              <tr class="border-b"><td class="px-6 py-4">300–1000</td><td>1.4–2.2%</td><td>4–14kg</td><td>4–9mm</td><td>Week 9–20</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 text-center md:text-left">
+        <div>
+          <img src="assets/logo.png" alt="Triumph Farms" class="h-14 mb-6 mx-auto md:mx-0">
+          <p class="text-gray-300 leading-relaxed">
+            Your trusted partner in profitable catfish farming across Ghana.<br>
+            Premium fingerlings • Expert training • Nationwide delivery
+          </p>
+          <div class="mt-6 flex gap-4 justify-center md:justify-start">
+            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/233555317397" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-500 transition"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+          <ul class="space-y-4 text-gray-300">
+            <li><a href="services.html" class="hover:text-accent transition">Services</a></li>
+            <li><a href="pricing.html" class="hover:text-accent transition">Pricing</a></li>
+            <li><a href="training.html" class="hover:text-accent transition">Training</a></li>
+            <li><a href="gallery.html" class="hover:text-accent transition">Gallery</a></li>
+            <li><a href="quick-feed-calculator.html" class="hover:text-accent transition">Feed Calculator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-6">Visit Us</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Medie Kotoku Road<br>
+            <em>Search "M & D Medical Center Kotoku Road" on Google Maps</em>
+          </p>
+          <p class="mt-6">
+            <a href="https://wa.me/233555317397" class="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold transition">
+              <i class="fab fa-whatsapp"></i> +233 555 317 397
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="mt-16 pt-8 border-t border-emerald-800 text-gray-400">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 text-center md:text-left">
+          <div class="flex items-center gap-6 text-sm justify-center md:justify-start">
+            <a href="./policy.html" class="hover:text-accent transition">Privacy Policy</a>
+            <a href="./terms.html" class="hover:text-accent transition">Terms & Conditions</a>
+          </div>
+          <p class="text-sm">© 2025 Triumph Farms & Consultation. All rights reserved.</p>
+          <div class="text-sm">
+            Designed by <a href="https://personal-portfolio-osunjimi-ibrahims-projects.vercel.app/" target="_blank" class="text-gray-300 hover:text-accent font-semibold transition">Ibrahim</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/233555317397" class="fixed bottom-6 left-6 bg-green-600 hover:bg-green-700 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-4xl z-40 transition hover:scale-110">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script>
+    function openMenu() {
+      document.getElementById('mobileSidebar').classList.remove('-translate-x-full');
+      document.getElementById('menuOverlay').classList.remove('hidden');
+    }
+    function closeMenu() {
+      document.getElementById('mobileSidebar').classList.add('-translate-x-full');
+      document.getElementById('menuOverlay').classList.add('hidden');
+    }
+
+    // Auto active link
+    document.addEventListener('DOMContentLoaded', () => {
+      const path = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-link').forEach(link => {
+        if (link.getAttribute('href') === path) link.classList.add('active');
+      });
+    });
+
+    // Calculator Logic
+    const feedingData = [
+      { maxWeight: 10,  percent: 3.0, size: '2mm', period: 'Week 1–2' },
+      { maxWeight: 50,  percent: 3.0, size: '2mm', period: 'Week 3–4' },
+      { maxWeight: 100, percent: 3.0, size: '3mm', period: 'Week 5–6' },
+      { maxWeight: 200, percent: 2.2, size: '3mm', period: 'Week 7–8' },
+      { maxWeight: 300, percent: 2.2, size: '4mm', period: 'Week 9–10' },
+      { maxWeight: 400, percent: 2.0, size: '4mm', period: 'Week 11–12' },
+      { maxWeight: 500, percent: 1.8, size: '6mm', period: 'Week 13–14' },
+      { maxWeight: 600, percent: 1.7, size: '6mm', period: 'Week 15–16' },
+      { maxWeight: 800, percent: 1.5, size: '6mm', period: 'Week 17–18' },
+      { maxWeight: Infinity, percent: 1.4, size: '9mm', period: 'Week 19–20' }
+    ];
+
+    document.getElementById('feedCalculator').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const weight = parseFloat(document.getElementById('fishWeight').value);
+      const totalFish = parseInt(document.getElementById('totalFish').value);
+
+      if (!weight || !totalFish || weight < 10) {
+        alert('Please enter valid values (weight ≥ 10g)');
+        return;
+      }
+
+      const row = feedingData.find(r => weight <= r.maxWeight) || feedingData[feedingData.length-1];
+      const dailyPerFish = weight * (row.percent / 100);
+      const totalDailyGrams = Math.round(dailyPerFish * totalFish);
+      const totalDailyKg = (totalDailyGrams / 1000).toFixed(2);
+
+      document.getElementById('feedDetails').innerHTML = `
+        <li class="flex justify-between"><span class="font-semibold">Average Weight:</span> <span>${weight} grams</span></li>
+        <li class="flex justify-between"><span class="font-semibold">Total Fish:</span> <span>${totalFish.toLocaleString()}</span></li>
+        <li class="flex justify-between text-xl"><span class="font-bold">Daily Feed Needed:</span> <span class="font-bold">${totalDailyKg} kg</span></li>
+        <li class="flex justify-between"><span class="font-semibold">Feed % of Body Weight:</span> <span>${row.percent}%</span></li>
+        <li class="flex justify-between"><span class="font-semibold">Recommended Pellet Size:</span> <span>${row.size}</span></li>
+        <li class="flex justify-between"><span class="font-semibold">Current Growth Stage:</span> <span>${row.period}</span></li>
+      `;
+
+      document.getElementById('result').classList.remove('hidden');
+      document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+
+  <!-- Tawk.to Chat -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/693158ced92827197bc3a2f7/1jbkc5q1s';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+</body>
+</html>
